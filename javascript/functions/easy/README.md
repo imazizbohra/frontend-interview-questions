@@ -39,17 +39,17 @@ export default function clamp(
   lower: number,
   upper: number,
 ): number {
-  // below range
+  // smaller than lower bound
   if (value < lower) {
     return lower;
   }
 
-  // above range
+  // bigger than upper bound
   if (value > upper) {
     return upper;
   }
 
-  // within a range
+  // within the bounds
   return value;
 }
 ```
