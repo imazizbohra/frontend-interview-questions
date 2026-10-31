@@ -12,7 +12,7 @@ Implement clamp(value, lower, upper) to restrict value to the inclusive range be
 
 (number): Returns value if it is within the range, lower if it is smaller, or upper if it is larger.
 
-## Examples
+## Example(s)
 
 ```ts
 // Within the bounds, return as-is.
