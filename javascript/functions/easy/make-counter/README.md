@@ -4,7 +4,7 @@ Implement a function makeCounter that accepts an optional integer value and retu
 
 ## Argument(s)
 
-- initialValue (number): Value of counter to start with.
+initialValue (number): Value of counter to start with.
 
 ## Returns
 

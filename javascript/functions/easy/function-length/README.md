@@ -4,7 +4,7 @@ Implement a function functionLength to return the number of parameters a functio
 
 ## Argument(s)
 
-- value (function): The function to operate on.
+value (function): The function to operate on.
 
 ## Returns
 
