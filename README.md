@@ -7,3 +7,5 @@ Collection of frontend interview questions
 [Functions - Easy](./javascript/functions/easy/)
 
 ## React
+
+[Hooks - Easy](./react/hooks/easy/)
