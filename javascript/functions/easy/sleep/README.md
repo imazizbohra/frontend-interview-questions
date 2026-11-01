@@ -8,7 +8,7 @@ duration (number): Duration to sleep for.
 
 ## Returns
 
-(number): Returns the value of counter at the moment.
+(number): Returns an empty promise.
 
 ## Example(s)
 
