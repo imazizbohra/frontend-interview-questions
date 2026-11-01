@@ -2,7 +2,7 @@
 
 Implement clamp(value, lower, upper) to restrict value to the inclusive range between lower and upper.
 
-## Arguments
+## Argument(s)
 
 - value (number): The number to clamp.
 - lower (number): The lower bound.
