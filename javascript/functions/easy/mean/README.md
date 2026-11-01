@@ -48,6 +48,7 @@ export default function mean(array: number[]): number {
 // Approach 2
 
 export default function mean(array: number[]): number {
-  return array.reduce((acc, value) => acc + value, 0) / array.length;;
+  // because 0 / 0 = NaN
+  return array.reduce((acc, value) => acc + value, 0) / array.length;
 }
 ```
