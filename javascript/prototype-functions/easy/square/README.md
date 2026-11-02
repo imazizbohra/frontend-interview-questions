@@ -1,6 +1,6 @@
 # Array.prototype.square
 
-Implement a custom Array function, Array.prototype.square(), which creates a new array with the results of squaring every element in the array that .square() is called on.
+Implement a custom Array function, `Array.prototype.square()`, which creates a new array with the results of squaring every element in the array that `.square()` is called on.
 
 ## Example(s)
 
