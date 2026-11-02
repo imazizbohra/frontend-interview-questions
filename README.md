@@ -6,6 +6,7 @@ Collection of frontend interview questions
 
 - [Functions - Easy](./javascript/functions/easy/)
 - [Prototype Functions - Easy](./javascript/prototype-functions/easy/)
+- [Lodash Functions - Easy](./javascript/lodash-functions/easy/)
 
 ## React
 
