@@ -11,6 +11,7 @@ Implement a custom Array function, Array.prototype.square(), which creates a new
 
 ## Reference(s)
 
+- Operators [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - Array [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 - Array [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 - Statements [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
