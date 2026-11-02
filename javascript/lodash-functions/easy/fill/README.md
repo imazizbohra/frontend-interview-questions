@@ -56,6 +56,8 @@ export default function fill<T>(
   if (array.length === 0) return [];
 
   const length: number = array.length;
+  
+  // normalizing indexes
   let nStart: number =
     start < 0 ? Math.max(start + length, 0) : Math.min(start, length);
   let nEnd: number =
