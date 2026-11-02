@@ -46,6 +46,13 @@ dropRightWhile([10, 11, 12, 4, 5], (value, _index, array) => value < array[1]);
 // Explanation: array[1] = 11. 5 < 11 (true, drop). 4 < 11 (true, drop). 12 < 11 (false, stop). Returns [10, 11, 12].
 ```
 
+## Note
+
+- If every element satisfies the predicate, the function should return an empty array.
+- If the rightmost element fails immediately, the function should return a shallow copy of the whole array.
+- The input array is never modified; slice() creates the returned array.
+- This is a suffix operation. If matching values appear earlier in the kept prefix, they remain in the output.
+
 ## Reference(s)
 
 - Array [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
