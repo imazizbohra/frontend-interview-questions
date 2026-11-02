@@ -29,6 +29,7 @@ difference([1, 2, 3], []); // => [1, 2, 3]
 - Operators [in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
 - Array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 - Array [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+- JavaScript [Same-value-zero equality](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality)
 - Lodash [_.difference](https://lodash.com/docs/4.18.1#difference)
 
 ## Solution(s)
