@@ -87,6 +87,8 @@ export default function findLastIndex<T>(
   if (length === 0) return -1;
 
   // normalizing index
+  // NaN || 0 => 0
+  // -0 || 0 => 0
   let nFromIndex: number = Math.trunc(fromIndex) || 0;
   
   nFromIndex =
