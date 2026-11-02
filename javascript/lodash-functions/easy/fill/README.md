@@ -1,6 +1,6 @@
 # Fill
 
-Implement a function fill(array, value, [start=0], [end=array.length]) that fills an array with values from start up to, but not including, end.
+Implement a function `fill(array, value, [start=0], [end=array.length])` that fills an array with values from start up to, but not including, end.
 
 Note: This method mutates array.
 

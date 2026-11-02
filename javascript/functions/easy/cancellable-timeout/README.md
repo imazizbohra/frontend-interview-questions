@@ -1,6 +1,6 @@
 # Cancellable Timeout
 
-Implement a function setCancellableTimeout that acts like setTimeout but, instead of returning a timer ID, returns a function that cancels the pending callback function when called. The setCancellableTimeout function should have the same signature as setTimeout:
+Implement a function `setCancellableTimeout` that acts like `setTimeout` but, instead of returning a timer ID, returns a function that cancels the pending callback function when called. The `setCancellableTimeout` function should have the same signature as `setTimeout`:
 
 ## Example(s)
 

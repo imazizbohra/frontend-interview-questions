@@ -1,6 +1,6 @@
 # From Pairs
 
-Implement a function fromPairs(pairs) that transforms a list of key-value pairs into an object.
+Implement a function `fromPairs(pairs)` that transforms a list of key-value pairs into an object.
 
 Process pairs in order. If a key appears more than once, the later pair overwrites the earlier value.
 

@@ -1,6 +1,6 @@
 # useCounter
 
-Implement a useCounter hook that manages counter state with additional convenience utility methods.
+Implement a `useCounter` hook that manages counter state with additional convenience utility methods.
 
 ## Argument(s)
 

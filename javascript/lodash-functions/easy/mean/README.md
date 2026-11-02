@@ -1,6 +1,6 @@
 # Mean
 
-Implement a function mean(array) that returns the mean (also known as the average) of the values in array, an array of numbers.
+Implement a function `mean(array)` that returns the mean (also known as the average) of the values in array, an array of numbers.
 
 ## Argument(s)
 

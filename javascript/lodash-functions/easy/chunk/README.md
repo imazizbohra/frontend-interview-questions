@@ -1,6 +1,6 @@
 # Chunk
 
-Implement a function chunk(array, [size=1]) that splits the input array into groups of length size and returns them in a new array. If the array can't be split evenly, the final chunk will be the remaining elements. The function should not modify the original input array.
+Implement a function `chunk(array, [size=1])` that splits the input array into groups of length size and returns them in a new array. If the array can't be split evenly, the final chunk will be the remaining elements. The function should not modify the original input array.
 
 ## Argument(s)
 

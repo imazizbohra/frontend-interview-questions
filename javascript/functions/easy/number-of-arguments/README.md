@@ -1,6 +1,6 @@
 # Number of Arguments
 
-Implement a function numberOfArguments that returns the number of arguments it was called with. Note that this value is the actual number of arguments, which can be more or less than the defined parameter count (which is determined by Function.prototype.length).
+Implement a function `numberOfArguments` that returns the number of arguments it was called with. Note that this value is the actual number of arguments, which can be more or less than the defined parameter count (which is determined by `Function.prototype.length`).
 
 ## Returns
 

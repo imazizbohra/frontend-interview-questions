@@ -1,6 +1,6 @@
 # Sleep
 
-In languages like Java and Python, a sleep function is available to suspend execution of the calling thread. However, unlike those languages, JavaScript is single-threaded, and blocking the main thread is not a good idea. Therefore, let's implement an asynchronous version of the sleep function that works similarly but does not block the main thread.
+In languages like Java and Python, a `sleep` function is available to suspend execution of the calling thread. However, unlike those languages, JavaScript is single-threaded, and blocking the main thread is not a good idea. Therefore, let's implement an asynchronous version of the `sleep` function that works similarly but does not block the main thread.
 
 ## Argument(s)
 

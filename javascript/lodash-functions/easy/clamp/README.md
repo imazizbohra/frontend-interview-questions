@@ -1,6 +1,6 @@
 # Clamp
 
-Implement clamp(value, lower, upper) to restrict value to the inclusive range between lower and upper.
+Implement `clamp(value, lower, upper)` to restrict value to the inclusive range between `lower` and `upper`.
 
 ## Argument(s)
 

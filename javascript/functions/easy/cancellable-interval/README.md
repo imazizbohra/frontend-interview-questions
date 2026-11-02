@@ -1,6 +1,6 @@
 # Cancellable Interval
 
-Implement a function setCancellableInterval that acts like setInterval but, instead of returning a timer ID, returns a function that cancels the interval when called. The setCancellableInterval function should have the same signature as setInterval:
+Implement a function `setCancellableInterval` that acts like `setInterval` but, instead of returning a timer ID, returns a function that cancels the interval when called. The `setCancellableInterval` function should have the same signature as `setInterval`:
 
 ## Example(s)
 

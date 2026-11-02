@@ -1,6 +1,6 @@
 # Drop While
 
-Given a predicate function and an array, implement a function dropWhile(array, predicate). This function should create a slice of array excluding elements dropped from the start of the list. Elements are dropped until predicate returns falsy. Your function should not modify the original array. The array may or may not be in sorted order.
+Given a predicate function and an array, implement a function `dropWhile(array, predicate)`. This function should create a slice of array excluding elements dropped from the start of the list. Elements are dropped until predicate returns falsy. Your function should not modify the original array. The array may or may not be in sorted order.
 
 ## Argument(s)
 

@@ -1,6 +1,6 @@
 # Compact
 
-Implement compact(array) so it creates a new array with all falsy values removed. This includes false, null, 0, '', undefined, NaN, and empty slots in sparse arrays. Do not modify the original array.
+Implement `compact(array)` so it creates a new array with all falsy values removed. This includes false, null, 0, '', undefined, NaN, and empty slots in sparse arrays. Do not modify the original array.
 
 ## Argument(s)
 

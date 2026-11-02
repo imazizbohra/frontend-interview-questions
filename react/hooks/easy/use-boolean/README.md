@@ -1,6 +1,6 @@
 # useBoolean
 
-Implement a useBoolean hook that manages boolean state with additional convenience utility methods.
+Implement a `useBoolean` hook that manages boolean state with additional convenience utility methods.
 
 ## Argument(s)
 

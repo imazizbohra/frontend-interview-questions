@@ -1,6 +1,6 @@
 # Find Index
 
-Implement a function findIndex(array, predicate, [fromIndex=0]) that takes an array of values, a function predicate, and an optional fromIndex number argument, and returns the index of the first element in the array that satisfies the provided testing function predicate.
+Implement a function `findIndex(array, predicate, [fromIndex=0])` that takes an array of values, a function predicate, and an optional fromIndex number argument, and returns the index of the first element in the array that satisfies the provided testing function predicate.
 
 ## Argument(s)
 

@@ -1,6 +1,6 @@
 # Difference
 
-Implement difference(array, values) so it returns a new array containing the values from array that do not appear in values. Preserve the order from array and do not modify the original arrays.
+Implement `difference(array, values)` so it returns a new array containing the values from array that do not appear in values. Preserve the order from array and do not modify the original arrays.
 
 For this question, treat NaN values as equal and skip empty slots in sparse arrays.
 
