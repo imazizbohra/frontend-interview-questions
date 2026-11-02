@@ -5,6 +5,7 @@ Collection of frontend interview questions
 ## Javascript
 
 [Functions - Easy](./javascript/functions/easy/)
+[Prototype Functions - Easy](./javascript/prototype-functions/easy/)
 
 ## React
 
