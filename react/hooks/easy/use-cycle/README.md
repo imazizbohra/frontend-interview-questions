@@ -50,5 +50,4 @@ export default function useCycle<T>(...args: T[]) {
 
   return [args[state], cycle] as const;
 }
-
 ```
