@@ -63,7 +63,7 @@ export default function useCounter(initialValue?: number): UseCounterReturn {
 
   const resetState = useCallback(() => {
     setState(initialValue ?? 0);
-  }, []);
+  }, [initialValue]);
 
   const setCounterState: Dispatch<SetStateAction<number>> = useCallback(
     (stateAction: SetStateAction<number>) => {
