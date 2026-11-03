@@ -29,6 +29,7 @@ intersection(); // => []
 
 ## Reference(s)
 
+- Array [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 - Lodash [_.intersection](https://lodash.com/docs/4.18.1#intersection)
 
 ## Solution(s)
