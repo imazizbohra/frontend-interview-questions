@@ -16,4 +16,5 @@ Collection of frontend interview questions
 
 ## Credits
 
-[greatfrontend.com](https://www.greatfrontend.com/)
+- [greatfrontend.com](https://www.greatfrontend.com/)
+- [patterns.dev](https://www.patterns.dev/)
