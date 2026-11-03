@@ -4,6 +4,7 @@ Collection of frontend interview questions
 
 ## Javascript
 
+- [Design Pattern - Easy](./javascript/design-pattern/easy/)
 - [Functions - Easy](./javascript/functions/easy/)
 - [Lodash Functions - Easy](./javascript/lodash-functions/easy/)
 - [Promise Functions - Easy](./javascript/promise-functions/easy/)
