@@ -43,25 +43,17 @@ export default function maxBy<T>(
   array: Array<T>,
   iteratee: (value: T) => any,
 ): any {
-  const map = new Map<any, T[]>();
+  const map = new Map<any, T>();
 
   array.forEach((elem) => {
     const rank = iteratee(elem);
 
-    if (rank) {
-      if (!map.has(rank)) {
-        const bucket = [];
-        bucket.push(elem);
-        map.set(rank, bucket);
-      }
+    if (rank && !map.has(rank)) {
+      map.set(rank, elem);
     }
   });
 
   const sortedEnteries = Array.from(map.entries()).sort(([a], [b]) => {
-    if (typeof a === "number" && typeof b === "number") {
-      return b - a;
-    }
-
     if (typeof a === "string" && typeof b === "string") {
       return b.localeCompare(a);
     }
@@ -70,10 +62,10 @@ export default function maxBy<T>(
       return b.getTime() - a.getTime();
     }
 
-    return 0;
+    return b - a;
   });
 
-  return sortedEnteries.length ? sortedEnteries[0][1][0] : undefined;
+  return sortedEnteries.length ? sortedEnteries[0][1] : undefined;
 }
 ```
 
