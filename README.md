@@ -13,3 +13,7 @@ Collection of frontend interview questions
 ## React
 
 [Hooks - Easy](./react/hooks/easy/)
+
+## Credits
+
+[greatfrontend.com](https://www.greatfrontend.com/)
