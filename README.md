@@ -4,16 +4,16 @@ Collection of frontend interview questions
 
 ## Javascript
 
-- [Design Pattern - Easy](./javascript/design-pattern/easy/)
-- [Functions - Easy](./javascript/functions/easy/)
-- [jQuery Functions - Easy](./javascript/jquery-functions/easy/)
-- [Lodash Functions - Easy](./javascript/lodash-functions/easy/)
-- [Promise Functions - Easy](./javascript/promise-functions/easy/)
-- [Prototype Functions - Easy](./javascript/prototype-functions/easy/)
+- [Easy - Design Pattern](./javascript/design-pattern/easy/)
+- [Easy - Javascript Functions](./javascript/javascript-functions/easy/)
+- [Easy - jQuery Functions](./javascript/jquery-functions/easy/)
+- [Easy - Lodash Functions](./javascript/lodash-functions/easy/)
+- [Easy - Promise Functions](./javascript/promise-functions/easy/)
+- [Easy - Prototype Functions](./javascript/prototype-functions/easy/)
 
 ## React
 
-[Hooks - Easy](./react/hooks/easy/)
+- [Easy - Hooks](./react/hooks/easy/)
 
 ## Techniques
 
