@@ -1,23 +1,6 @@
-# frontend-interview-questions
+# Techniques
 
-Collection of frontend interview questions
-
-## Javascript
-
-- [Easy - Design Pattern](./javascript/design-pattern/easy/)
-- [Easy - Javascript Functions](./javascript/javascript-functions/easy/)
-- [Easy - jQuery Functions](./javascript/jquery-functions/easy/)
-- [Easy - Lodash Functions](./javascript/lodash-functions/easy/)
-- [Easy - Promise Functions](./javascript/promise-functions/easy/)
-- [Easy - Prototype Functions](./javascript/prototype-functions/easy/)
-
-## React
-
-- [Easy - Hooks](./react/hooks/easy/)
-
-## Techniques
-
-### Check out-of-bound index
+## Check out-of-bound index
 
 ```ts
 if (index < -length || index >= length) {
@@ -25,14 +8,14 @@ if (index < -length || index >= length) {
 }
 ```
 
-### Normalizing array index
+## Normalizing array index
 
 ```ts
 const nIndex =
     index < 0 ? Math.max(index + length, 0) : Math.min(index, length);
 ```
 
-### Find type of a value
+## Find type of a value
 
 ```ts
 // output format: "array"
@@ -54,7 +37,7 @@ const getType = (value) => {
 };
 ```
 
-### Check if a value is primitive
+## Check if a value is primitive
 
 ```ts
 const isPrimitive = (
@@ -64,7 +47,7 @@ const isPrimitive = (
 };
 ```
 
-### Count no of items in a range
+## Count no of items in a range
 
 ```ts
 // if step = 0, handle divide by zero
@@ -74,7 +57,7 @@ const isPrimitive = (
 const count = (end - start) / (step || 1);
 ```
 
-### Check empty slot in an array
+## Check empty slot in an array
 
 ```ts
 if (index in array) {
@@ -82,7 +65,7 @@ if (index in array) {
 }
 ```
 
-### Check if argument is explicitly undefined
+## Check if argument is explicitly undefined
 
 ```ts
 // used in Array.prototype.reduce 
@@ -98,7 +81,7 @@ if (index in array) {
 })(undefined)
 ```
 
-### Tree traversal bottom-up
+## Tree traversal bottom-up
 
 ```ts
 // used internally by event bubble and capture phase
@@ -109,7 +92,3 @@ while (current) {
 }
 ```
 
-## Credits
-
-- [greatfrontend.com](https://www.greatfrontend.com/)
-- [patterns.dev](https://www.patterns.dev/)
