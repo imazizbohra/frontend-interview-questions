@@ -17,7 +17,7 @@ Collection of frontend interview questions
 
 ## Techniques
 
-### Check negative array index
+### Check out-of-bound index
 
 ```ts
 if (index < -length || index >= length) {
