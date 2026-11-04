@@ -32,6 +32,46 @@ const nIndex =
     index < 0 ? Math.max(index + length, 0) : Math.min(index, length);
 ```
 
+### Find type of a value
+
+```ts
+// output format: "array"
+
+const getType = (value) => {
+  if (value === null) return "null";
+
+  if (value === undefined) return "undefined";
+
+  return Object.getPrototypeOf(value)?.constructor?.name?.toLowerCase() ?? "object";
+};
+```
+
+```ts
+// output format: "[object Array]"
+
+const getType = (value) => {
+  return Object.prototype.toString.call(value);
+};
+```
+
+### Check if a value is primitive
+
+```ts
+const isPrimitive = (
+  value: unknown,
+): value is null | undefined | string | number | boolean | symbol | bigint => {
+  return Object(value) !== value;
+};
+```
+
+### Cound no of items in a range
+
+```ts
+// if step = 0, handle divide by zero
+// if range is negative then step also becomes negative; negative division produces positive count
+
+const count = (end - start) / (step || 1);
+```
 
 ## Credits
 
