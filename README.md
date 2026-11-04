@@ -82,6 +82,20 @@ if (index in array) {
 }
 ```
 
+### Check if argument is explicitly undefined
+
+```ts
+(function (arg) {
+  console.log(arguments.length) // 0
+})()
+```
+
+```ts
+(function (arg) {
+  console.log(arguments.length) // 1
+})(undefined)
+```
+
 ## Credits
 
 - [greatfrontend.com](https://www.greatfrontend.com/)
