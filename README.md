@@ -98,6 +98,17 @@ if (index in array) {
 })(undefined)
 ```
 
+### Tree traversal bottom-up
+
+```ts
+// used internally by event bubble and capture phase
+
+let current: Node | null = node.parentNode;
+while (current) {
+  current = current.parentNode;
+}
+```
+
 ## Credits
 
 - [greatfrontend.com](https://www.greatfrontend.com/)
