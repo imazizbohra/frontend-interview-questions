@@ -28,8 +28,8 @@ if (index < -length || index >= length) {
 ### Normalizing array index
 
 ```ts
-const nStart: number =
-    start < 0 ? Math.max(start + length, 0) : Math.min(start, length);
+const nIndex =
+    index < 0 ? Math.max(index + length, 0) : Math.min(index, length);
 ```
 
 
