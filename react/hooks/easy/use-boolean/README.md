@@ -6,7 +6,6 @@ Implement a `useBoolean` hook that manages boolean state with additional conveni
 
 initialValue: boolean: Initial value of the boolean state. If not provided, it should default to false.
 
-
 ## Returns
 
 The useBoolean hook returns an object with the following properties:
@@ -38,7 +37,7 @@ React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-wi
 ## Solution(s)
 
 ```ts
-import { useState, useCallback } from 'react';  
+import { useState } from 'react';  
 
 type UseBooleanReturn = {
   value: boolean;
@@ -49,13 +48,9 @@ type UseBooleanReturn = {
 export default function useBoolean(initialValue?: boolean): UseBooleanReturn {
   const [state, setState] = useState<boolean>(initialValue ?? false);
 
-  const setTrue = useCallback(() => {
-    setState(true);
-  }, []);
+  const setTrue = () => setState(true);
 
-  const setFalse = useCallback(() => {
-    setState(false);
-  }, []);
+  const setFalse = () => setState(false);
 
   const returnValue: UseBooleanReturn = {
     value: state,
