@@ -74,6 +74,14 @@ const isPrimitive = (
 const count = (end - start) / (step || 1);
 ```
 
+### Check empty slot in an array
+
+```ts
+if (index in array) {
+  // non-empty slot
+}
+```
+
 ## Credits
 
 - [greatfrontend.com](https://www.greatfrontend.com/)
