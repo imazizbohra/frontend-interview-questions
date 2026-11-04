@@ -45,5 +45,4 @@ export default function useEffectOnce(effect: EffectCallback) {
     return cleanupFn;
   }, []);
 }
-
 ```
