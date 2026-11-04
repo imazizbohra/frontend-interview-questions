@@ -64,7 +64,7 @@ const isPrimitive = (
 };
 ```
 
-### Cound no of items in a range
+### Count no of items in a range
 
 ```ts
 // if step = 0, handle divide by zero
