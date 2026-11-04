@@ -22,6 +22,8 @@ There are some nuances in how `Array.prototype.reduce` works and what values are
 ## Solution(s)
 
 ```ts
+// Approach 1
+
 Array.prototype.myReduce = function (callbackFn, initialValue) {
   const array = this;
   const length = array.length;
@@ -45,6 +47,39 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
       } else {
         acc = callbackFn.call(null, acc, array[i], i, array);
       }
+    }
+  }
+
+  return acc;
+};
+```
+
+```ts
+// Approach 2
+
+Array.prototype.myReduce = function (callbackFn, initialValue) { 
+  const len = this.length;
+  const noInitialValue = arguments.length <= 1;
+
+  let k = 0;
+  let acc: any;
+
+  if (noInitialValue) {
+    // ignore empty slots
+    while (k < len && !(k in this)) k++;
+    if (k >= len) {
+      throw new TypeError('Reduce of empty array with no initial value');
+    }
+
+    acc = this[k];
+    k++;
+  } else {
+    acc = initialValue;
+  }
+
+  for (; k < len; k++) {
+    if (k in this) {
+      acc = callbackFn(acc, this[k], k, this);
     }
   }
 
