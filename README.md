@@ -85,6 +85,8 @@ if (index in array) {
 ### Check if argument is explicitly undefined
 
 ```ts
+// used in Array.prototype.reduce 
+
 (function (arg) {
   console.log(arguments.length) // 0
 })()
