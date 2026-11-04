@@ -47,6 +47,20 @@ const isPrimitive = (
 };
 ```
 
+## Check if a value is a POJO (Plain Old JavaScript Object)
+
+```ts
+function isPlainObject(value: unknown): boolean {
+  if (value === null || typeof value !== "object") {
+    return false;
+  }
+
+  const proto = Object.getPrototypeOf(value);
+
+  return proto === Object.prototype || proto === null;
+}
+```
+
 ## Count no of items in a range
 
 ```ts
@@ -91,4 +105,3 @@ while (current) {
   current = current.parentNode;
 }
 ```
-
