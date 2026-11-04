@@ -68,7 +68,8 @@ const isPrimitive = (
 
 ```ts
 // if step = 0, handle divide by zero
-// if range is negative then step also becomes negative; negative division produces positive count
+// if range is negative then step also becomes negative; 
+// division by negative produces positive value
 
 const count = (end - start) / (step || 1);
 ```
