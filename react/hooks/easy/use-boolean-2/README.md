@@ -34,8 +34,8 @@ export default function Component() {
 
 ## Reference(s)
 
-React [useCallback](https://react.dev/reference/react/useCallback)
-React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
+- React [useCallback](https://react.dev/reference/react/useCallback)
+- React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
 ## Solution(s)
 
