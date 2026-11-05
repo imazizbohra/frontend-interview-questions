@@ -52,7 +52,6 @@ export default function usePrevious<T>(newState: T): T | undefined {
 
   return prevState.current as T | undefined;
 }
-
 ```
 
 ```ts
