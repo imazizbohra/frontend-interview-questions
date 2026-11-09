@@ -31,7 +31,7 @@ The hook returns an object with the following properties:
 
 ## Example(s)
 
-```ts
+```tsx
 const defaultValue = ['apple', 'banana'];
 
 export default function Component() {
