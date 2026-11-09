@@ -95,6 +95,23 @@ if (index in array) {
 })(undefined)
 ```
 
+## Preserve arguments without bind
+
+```ts
+function collect(this: any, args: any[]): any {
+  ...
+
+  return function next(arg: any): any {
+    const nextArgs = arguments.length === 0 ? args : [...args, arg];
+    
+    return collect(this, nextArgs);
+  };
+}
+
+const args = arguments.length === 0 ? [] : [arg]
+return collect(this, args);
+```
+
 ## Tree traversal bottom-up
 
 ```ts
