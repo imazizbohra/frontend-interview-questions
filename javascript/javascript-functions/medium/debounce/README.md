@@ -62,9 +62,9 @@ debouncedIncrement(); // i = 0
 
 ## Techniques
 
-- Using setTimeout
+- Using `setTimeout`
 - Closures
-- How this works
+- How `this` works
 - Deferring a call without losing its receiver or argument list
 
 ## Solution(s)
