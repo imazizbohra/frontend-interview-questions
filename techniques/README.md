@@ -79,6 +79,23 @@ if (index in array) {
 }
 ```
 
+## Preserve empty slots in an array
+
+```ts
+const arr = [1, , 2, , ,];
+const newArr = [];
+
+for(let i = 0; i < arr.length; i++) {
+  if (i in arr) {
+    newArr[i] = arr[i];
+  } else {
+    newArr.length++;
+  }
+}
+
+console.log(newArr) // [ 1, <1 empty item>, 2, <2 empty items> ]
+```
+
 ## Check if argument is explicitly undefined
 
 ```ts
