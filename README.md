@@ -12,6 +12,7 @@ Collection of frontend interview questions
 - [Easy - Prototype Functions](./javascript/prototype-functions/easy/)
 - [Medium - Javascript Functions](./javascript/javascript-functions/medium/)
 - [Medium - Lodash Functions](./javascript/lodash-functions/medium/)
+- [Medium - Prototype Functions](./javascript/prototype-functions/medium/)
 
 ## React
 
