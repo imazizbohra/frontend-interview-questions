@@ -39,12 +39,12 @@ export default function countBy<T>(
   const map: Record<string, number> = Object.create(null);
 
   for (let elem of array) {
-    const value = String(iteratee.call(null, elem));
+    const key = String(iteratee.call(null, elem));
 
-    if (value in map) {
-      map[value]++;
+    if (key in map) {
+      map[key]++;
     } else {
-      map[value] = 1;
+      map[key] = 1;
     }
   }
 
