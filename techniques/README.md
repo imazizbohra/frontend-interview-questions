@@ -139,3 +139,20 @@ while (current) {
   current = current.parentNode;
 }
 ```
+
+## Check if throttle window has already elapsed
+
+```ts
+const remaining = interval - (Date.now() - lastPublishedAt);
+if (remaining <= 0) {
+  // do something
+  return;
+}
+
+// or
+
+if (interval < (Date.now() - lastPublishedAt)) {
+  // do something
+  return;
+}
+```
