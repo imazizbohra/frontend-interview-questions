@@ -154,19 +154,19 @@ export function isUndefined(value: unknown): boolean {
 ```ts
 // getType will handle all the types  
 
-console.log(getType([]));
-console.log(getType(BigInt(9007199254740991)));
-console.log(getType(true));
-console.log(getType(() => {}));
-console.log(getType(null));
-console.log(getType(42));
-console.log(getType({}));
-console.log(getType(/ab+c/i));
-console.log(getType(new Map()));
-console.log(getType(new Set()));
-console.log(getType(new Date()));
-console.log(getType("hello world"));
-console.log(getType(Symbol("hello")));
-console.log(getType(undefined));
-console.log(getType(Object.create(null)));
+console.log(getType([])); // 'array'
+console.log(getType(BigInt(9007199254740991))); // 'bigint'
+console.log(getType(true)); // 'boolean'
+console.log(getType(() => {})); // 'function'
+console.log(getType(null)); // 'null'
+console.log(getType(42)); // 'number'
+console.log(getType({})); // 'object'
+console.log(getType(/ab+c/i)); // 'regexp'
+console.log(getType(new Map())); // 'map'
+console.log(getType(new Set())); // 'set'
+console.log(getType(new Date())); // 'date'
+console.log(getType("hello world")); // 'string'
+console.log(getType(Symbol("hello"))); // 'symbol'
+console.log(getType(undefined)); // 'undefined'
+console.log(getType(Object.create(null))); // 'object'
 ```
