@@ -156,3 +156,27 @@ if (interval < (Date.now() - lastPublishedAt)) {
   return;
 }
 ```
+
+## Cancel promise with AbortController
+
+```ts
+const controller = new AbortController();
+const signal = controller.signal;
+
+new Promise<T>((resolve, reject) => {
+  let isAborted = false;
+
+  signal.addEventListener("abort", () => {
+    isAborted = true;
+  });
+
+  // after running some async task
+  if (isAborted) {
+    reject(new Error("Aborted"));
+  };
+
+  resolve(result);
+});
+
+controller.abort();
+```
