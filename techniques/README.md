@@ -157,7 +157,7 @@ if (interval < (Date.now() - lastPublishedAt)) {
 }
 ```
 
-## Cancel promise with AbortController
+## Cancel Promise with AbortController
 
 ```ts
 const controller = new AbortController();
