@@ -140,6 +140,22 @@ while (current) {
 }
 ```
 
+## Traverse nodes of a DOM subtree in document order
+
+```ts
+const iterator = document.createNodeIterator(
+      root,
+      NodeFilter.SHOW_ELEMENT,
+    );
+    
+let node: Node | null = iterator.nextNode();
+while (node) {
+  // do some ops
+
+  node = iterator.nextNode();
+}
+```
+
 ## Check if throttle window has already elapsed
 
 ```ts
