@@ -129,7 +129,7 @@ const args = arguments.length === 0 ? [] : [arg]
 return collect(this, args);
 ```
 
-## Tree traversal bottom-up
+## Traverse nodes of a DOM tree bottom-up
 
 ```ts
 // used internally by event bubble and capture phase
@@ -143,6 +143,8 @@ while (current) {
 ## Traverse nodes of a DOM subtree in document order
 
 ```ts
+// Approach 1
+
 const iterator = document.createNodeIterator(
       root,
       NodeFilter.SHOW_ELEMENT,
@@ -153,6 +155,26 @@ while (node) {
   // do some ops
 
   node = iterator.nextNode();
+}
+```
+
+```ts
+// Approach 2
+
+function traverse(el: Element) {
+  if (el == null) {
+    return;
+  }
+
+  // do some ops
+
+  for (const child of el.children) {
+    traverse(child);
+  }
+}
+
+for (const child of element.children) {
+  traverse(child);
 }
 ```
 
