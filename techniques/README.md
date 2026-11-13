@@ -71,6 +71,12 @@ function isPlainObject(value: unknown): boolean {
 const count = (end - start) / (step || 1);
 ```
 
+## Convert array to object
+
+```ts
+const obj = { ...array };
+```
+
 ## Check empty slot in an array
 
 ```ts
@@ -176,6 +182,27 @@ function traverse(el: Element) {
 for (const child of element.children) {
   traverse(child);
 }
+```
+
+## Collect all the paths of the object
+
+```ts
+function traverse(
+    obj: Object,
+    path: Array<string>,
+  ) {
+    for (const [key, value] of Object.entries(obj)) {
+      if (typeof value !== 'object' || value === null) {
+        // if value is primite or null
+        // hit the leaf 
+        console.log(path.concat(key).filter(Boolean), value) // [a, b, c] 3
+      } else {
+        traverse(value, path.concat(key));
+      }
+    }
+  }
+
+traverse(obj, []);
 ```
 
 ## Check if throttle window has already elapsed
