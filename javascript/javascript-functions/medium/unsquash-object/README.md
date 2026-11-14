@@ -65,6 +65,15 @@ const object = {
 unsquashObject(object); // { foo: { bar: 2 } }
 ```
 
+## Notes
+
+- An empty input object should return an empty object.
+- Keys with no delimiters should stay at the top level.
+- Empty path segments, such as `foo..bar`, should be ignored.
+- Nullish values (`null` and `undefined`) should be preserved.
+- Array-like paths (`a.0`, `a.1`) should produce arrays.
+- Conflicting keys (for example both `a` and `a.b`) are ambiguous. In JavaScript object insertion order, later assignments can overwrite earlier structures.
+
 ## Reference(s)
 
 - Glossary [Recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
