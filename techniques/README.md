@@ -245,3 +245,9 @@ new Promise<T>((resolve, reject) => {
 
 controller.abort();
 ```
+
+## Find element instance of the owning document
+
+```ts
+const ElementInstance = container.ownerDocument.defaultView?.Element;
+```
