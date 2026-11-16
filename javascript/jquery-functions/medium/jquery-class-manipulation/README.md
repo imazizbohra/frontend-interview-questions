@@ -107,7 +107,7 @@ export default function lowestHidingElement(elements: Array<Element>): Element {
   for (let index = 1; index < elements.length; index++) {
     const element = elements[index];
 
-    // Raise lowest untill it contains the element
+    // Raise lowest until it contains the element
     while (!lowest.contains(element)) {
       lowest = lowest.parentElement as Element;
     }
