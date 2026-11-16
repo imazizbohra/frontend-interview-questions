@@ -251,3 +251,13 @@ controller.abort();
 ```ts
 const ElementInstance = container.ownerDocument.defaultView?.Element;
 ```
+
+## Get element's tag name in lowerCase
+
+```ts
+const tagName = element.tagName.toLowerCase();
+
+// or
+
+const tagName = element.localName; // by default in lower case
+```
