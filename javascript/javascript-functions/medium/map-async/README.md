@@ -6,6 +6,8 @@ What if the mapping function is not a synchronous function, i.e., it returns a p
 
 Implement a function `mapAsync` that accepts an array of items and maps each element with an asynchronous mapping function. The function should return a `Promise` that resolves to the mapped results. If any promise returned by the mapping function rejects, the returned promise should reject with the same reason.
 
+**Note**: Similar to [Promise.all()](../../../promise-functions/medium/promise-all/)
+
 ## Example(s)
 
 ```ts
