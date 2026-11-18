@@ -67,6 +67,7 @@ export default function useMediaQuery(query: string): boolean {
 
 import { useCallback, useSyncExternalStore } from 'react';
 
+// useSyncExternalStore connects React components to external data sources and ensures they stay synchronized when that data changes.
 export default function useMediaQuery(query: string): boolean {
   // useSyncExternalStore expects a subscribe function that removes the exact listener it adds.
   const subscribe = useCallback(
