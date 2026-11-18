@@ -61,6 +61,15 @@ function isPlainObject(value: unknown): boolean {
 }
 ```
 
+## Iterate own keys of object including String, Symbol and Non-enumerable keys
+
+```ts
+for (const key of Reflect.ownKeys(value as Object)) {
+  // includes symbol keys too
+  console.log(object.propertyIsEnumerable(key));
+}
+```
+
 ## Count no of items in a range
 
 ```ts
