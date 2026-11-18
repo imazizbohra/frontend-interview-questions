@@ -70,6 +70,47 @@ for (const key of Reflect.ownKeys(value as Object)) {
 }
 ```
 
+## Handle circular reference
+
+```ts
+// first add clonedObj in cache then process the value so that while processing value if you hit circular reference then cache will help you from dying
+function clone<T>(value: T, cache: Map<T, T>): T {
+  // cache hit
+  if (cache.has(value)) {
+    return cache.get(value) as T;
+  }
+
+  // handle object
+  if (typeof value === "object" && value !== null) {
+    // preserve prototype
+    const clonedObj = Object.create(Object.getPrototypeOf(value));
+    cache.set(value, clonedObj);
+
+    // `Reflect.ownKeys()` includes symbol keys too.
+    for (const key of Reflect.ownKeys(value as Object)) {
+      const value_ = (value as any)[key];
+      clonedObj[key] = clone(value_, cache);
+    }
+    return clonedObj;
+  }
+
+  return value;
+}
+
+const obj: any = {
+  name: "John",
+  age: 25,
+  address: {
+    city: "Bhopal",
+  },
+};
+
+// circular-reference
+obj.self = obj;
+
+clone(obj, new Map());
+```
+
 ## Count no of items in a range
 
 ```ts
