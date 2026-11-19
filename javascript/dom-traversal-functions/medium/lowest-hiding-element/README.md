@@ -1,99 +1,121 @@
-# List Format
+# Lowest Hiding Element
 
-Given a list of strings, implement a function `listFormat` that returns the items concatenated into a single `string`. A common use case is summarizing reactions on social media posts.
+Sometimes UI behavior is controlled by hiding a container instead of hiding each descendant individually. If several elements need to disappear together, it is useful to know the deepest element in the DOM tree that contains all of them.
 
-The function should support a few options as the second parameter:
+Implement `lowestHidingElement(elements)`, which takes a non-empty array of DOM elements and returns the deepest element that would hide all of them if that element were hidden.
 
-- `sorted`: Sorts the items alphabetically.
-- `length`: Shows only the first length items, using "and X other(s)" for the remaining. Ignore invalid values (negative, 0, etc.).
-- `unique`: Removes duplicate items.
+## Argument(s)
+
+`lowestHidingElement(elements)`
+
+`elements (Element[])`: A non-empty array of elements from the same document tree.
+
+## Returns
+
+Returns the deepest `Element` that contains every element in `elements`.
+
+## Notes
+
+- An element counts as hiding itself and all of its descendants.
+- If one input element contains all the others, return that element.
+- Do not mutate the DOM.
+- Do not worry about Shadow DOM, iframes, detached trees, or existing CSS visibility state.
+“Hidden” is only the motivation for the problem. The task is to find the shared deepest containing element.
 
 ## Example(s)
 
 ```ts
-listFormat([]); // ''
+const page = new DOMParser().parseFromString(
+  `
+    <main>
+      <section>
+        <button>Save</button>
+        <button>Cancel</button>
+      </section>
+      <aside>
+        <button>Archive</button>
+      </aside>
+    </main>
+  `,
+  'text/html',
+);
 
-listFormat(['Bob']); // 'Bob'
-listFormat(['Bob', 'Alice']); // 'Bob and Alice'
+const section = page.body.firstElementChild.firstElementChild;
+const saveButton = section.firstElementChild;
+const cancelButton = section.lastElementChild;
 
-listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John']);
-// 'Bob, Ben, Tim, Jane and John'
+lowestHidingElement([saveButton, cancelButton]);
+// section
+```
 
-listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John'], {
-  length: 3,
-}); // 'Bob, Ben, Tim and 2 others'
+```ts
+const page = new DOMParser().parseFromString(
+  `
+    <main>
+      <nav>
+        <ul>
+          <li><a href="/docs">Docs</a></li>
+          <li><a href="/api">API</a></li>
+        </ul>
+      </nav>
+    </main>
+  `,
+  'text/html',
+);
 
-listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John'], {
-  length: 4,
-}); // 'Bob, Ben, Tim, Jane and 1 other'
+const list = page.body.firstElementChild.firstElementChild.firstElementChild;
+const firstLink = list.firstElementChild.firstElementChild;
 
-listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John'], {
-  length: 3,
-  sorted: true,
-}); // 'Ben, Bob, Jane and 2 others'
-
-listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John', 'Bob'], {
-  length: 3,
-  unique: true,
-}); // 'Bob, Ben, Tim and 2 others'
-
-listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John'], {
-  length: 3,
-  unique: true,
-}); // 'Bob, Ben, Tim and 2 others'
-
-listFormat(['Bob', 'Ben', '', '', 'John']); // 'Bob, Ben and John'
+lowestHidingElement([list, firstLink]);
+// list
 ```
 
 ## Reference(s)
 
-- Array [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-- Array [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-- Array [from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
-- Javascript [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+- Array [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+- Node [parentElement](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement)
+- Node [contains](https://developer.mozilla.org/en-US/docs/Web/API/Node/contains)
 
 ## Solution(s)
 
 ```ts
-export default function listFormat(
-  items: Array<string>,
-  options?: { sorted?: boolean; length?: number; unique?: boolean },
-): string {
-  const { sorted = false, length, unique = false } = options || {};
-  const SEPARATOR = ", ";
-  let array = items.slice();
+// Approach 1
 
-  array = array.filter(Boolean);
+export default function lowestHidingElement(elements: Array<Element>): Element {
+  let lca: Element = elements[0];
 
-  if (unique) {
-    array = Array.from(new Set(array));
+  elements.forEach((element) => {
+    let node: Element | null = element;
+
+    while (node) {
+      if (elements.every((item) => node!.contains(item))) {
+        lca = node; // found Lowest Common Ancestor, early exit
+        break;
+      }
+
+      node = node.parentElement;
+    }
+  });
+
+  return lca;
+}
+```
+
+```ts
+// Approach 2 
+
+export default function lowestHidingElement(elements: Array<Element>): Element {
+  let lowest = elements[0];
+
+  for (let index = 1; index < elements.length; index++) {
+    const element = elements[index];
+
+    // Once lowest contains everything seen so far, only its ancestors can contain element too.
+    while (!lowest.contains(element)) {
+      lowest = lowest.parentElement as Element;
+    }
   }
 
-  if (sorted) {
-    array = array.sort();
-  }
-
-  if (array.length === 0) {
-    return "";
-  }
-
-  if (array.length === 1) {
-    return array[0];
-  }
-
-  if (!length || length < 0 || length >= array.length) {
-    const firstSlice = array.slice(0, array.length - 1);
-    const lastElem = array[array.length - 1];
-
-    return firstSlice.join(SEPARATOR).concat(` and ${lastElem}`);
-  }
-
-  const firstSlice = array.slice(0, length);
-  const lastSlice = array.slice(length);
-  const suffix = lastSlice.length === 1 ? "other" : "others";
-
-  return firstSlice
-    .join(SEPARATOR)
-    .concat(` and ${lastSlice.length} ${suffix}`);
+  return lowest;
 }
 ```
