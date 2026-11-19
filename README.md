@@ -11,6 +11,7 @@ Collection of frontend interview questions
 - [Easy - Promise Functions](./javascript/promise-functions/easy/)
 - [Easy - Prototype Functions](./javascript/prototype-functions/easy/)
 - [Medium - Design Pattern](./javascript/design-pattern/medium/)
+- [Medium - DOM Traversal Functions](./javascript/dom-traversal-functions/medium/)
 - [Medium - Javascript Functions](./javascript/javascript-functions/medium/)
 - [Medium - Lodash Functions](./javascript/lodash-functions/medium/)
 - [Medium - NodeJS Functions](./javascript/nodejs-functions/medium/)
