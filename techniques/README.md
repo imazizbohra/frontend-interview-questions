@@ -234,6 +234,19 @@ for (const child of element.children) {
 }
 ```
 
+## Collect path from target to root in DOM
+
+```ts
+const path: Array<number> = [];
+let node = target;
+while (node !== root) {
+  const parent = node.parentNode as Node;
+  // Record each child index taken while walking from the target back to root.
+  path.push(Array.prototype.indexOf.call(parent.childNodes, node));
+  node = parent;
+}
+```
+
 ## Collect all the paths of the object
 
 ```ts
