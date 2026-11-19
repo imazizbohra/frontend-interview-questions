@@ -1,4 +1,4 @@
-# Promisify 2
+# Promisify II
 
 Note: This is an advanced version of [Promisify](../promisify/), which you should complete before attempting this question.
 

@@ -13,6 +13,7 @@ Collection of frontend interview questions
 - [Medium - Design Pattern](./javascript/design-pattern/medium/)
 - [Medium - Javascript Functions](./javascript/javascript-functions/medium/)
 - [Medium - Lodash Functions](./javascript/lodash-functions/medium/)
+- [Medium - NodeJS Functions](./javascript/nodejs-functions/medium/)
 - [Medium - Prototype Functions](./javascript/prototype-functions/medium/)
 
 ## React

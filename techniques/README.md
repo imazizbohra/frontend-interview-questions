@@ -311,3 +311,20 @@ const tagName = element.tagName.toLowerCase();
 
 const tagName = element.localName; // by default in lower case
 ```
+
+## Detect whether a function or constructor was called using the new operator
+
+```ts
+function Foo() {
+  if (!new.target) {
+    throw new TypeError("calling Foo constructor without new is invalid");
+  }
+}
+
+try {
+  Foo();
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: calling Foo constructor without new is invalida
+}
+```
