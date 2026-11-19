@@ -1,6 +1,6 @@
 # Lowest Hiding Element
 
-a.k.a Lowest Common Ancestor
+a.k.a **Lowest Common Ancestor**
 
 Sometimes UI behavior is controlled by hiding a container instead of hiding each descendant individually. If several elements need to disappear together, it is useful to know the deepest element in the DOM tree that contains all of them.
 
