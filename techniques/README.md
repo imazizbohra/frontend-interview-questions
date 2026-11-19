@@ -234,7 +234,7 @@ for (const child of element.children) {
 }
 ```
 
-## Collect path from target to root in DOM
+## Collect numeric path from target to root in DOM
 
 ```ts
 const path: Array<number> = [];
