@@ -1,4 +1,4 @@
-# URLSearchParams
+# URLSearchParams II
 
 This is a follow-up to [URLSearchParams](../url-search-params/).
 

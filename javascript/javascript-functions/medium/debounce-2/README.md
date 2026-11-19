@@ -1,4 +1,4 @@
-# Debounce 2
+# Debounce II
 
 **Note:** This is an advanced version of [Debounce](../debounce/); you should complete that first before attempting this question.
 

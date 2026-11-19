@@ -1,4 +1,4 @@
-# Make Counter 2
+# Make Counter II
 
 Implement a function `makeCounter` that accepts an optional integer value (defaults to 0) and returns an object that contains the following methods:
 
