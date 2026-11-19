@@ -22,7 +22,7 @@ Collection of frontend interview questions
 
 ## Techniques
 
-[Problem Solving Techniques](./techniques/)
+[List of techniques used to solve problems](./techniques/)
 
 ## Credits
 
