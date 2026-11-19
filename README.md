@@ -20,6 +20,7 @@ Collection of frontend interview questions
 
 - [Easy - Hooks](./react/hooks/easy/)
 - [Medium - Hooks](./react/hooks/medium/)
+- [Medium - Utility](./react/utility/)
 
 ## Techniques
 
