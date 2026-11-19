@@ -1,4 +1,4 @@
-# Get
+# In Range
 
 Implement a function `inRange(value, [start=0], end)` to check if a number value is greater than or equal to start and less than end. If only two arguments are specified, the second argument becomes end and start is set to 0. If start is greater than end, the parameters are swapped to support reversed ranges.
 

@@ -1,4 +1,4 @@
-# useBoolean 2
+# useBoolean II
 
 This is a follow-up to `useBoolean`. In this version, the boolean behavior stays the same, but the returned methods should be memoized so that each method keeps the same function instance across re-renders.
 
