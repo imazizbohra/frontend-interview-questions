@@ -70,6 +70,30 @@ for (const key of Reflect.ownKeys(value as Object)) {
 }
 ```
 
+## Merge source object to target object
+
+```ts
+// similar to Object.assign(target, source)
+
+function merge(target: unknown, source: unknown): unknown {
+  if (Array.isArray(target) && Array.isArray(source)) {
+    for (let i = 0; i < source.length; i++) {
+      target[i] = merge(target[i], source[i]);
+    }
+    return target;
+  }
+
+  if (isPlainObject(target) && isPlainObject(source)) {
+    for (const key in source) {
+      target[key] = merge(target[key], source[key]);
+    }
+    return target;
+  }
+
+  return source;
+}
+```
+
 ## Handle circular reference
 
 ```ts
