@@ -46,7 +46,7 @@ console.log(context.stack);
 
 ## Reference(s)
 
-- Glossary [Middleware](https://developer.mozilla.org/en-US/docs/Glossary/Middleware)
+- Concept [Middleware](https://developer.mozilla.org/en-US/docs/Glossary/Middleware)
 - Design Pattern [middleware](https://www.patterns.dev/vanilla/mediator-pattern/)
 
 ## Solution(s)

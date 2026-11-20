@@ -76,7 +76,7 @@ unsquashObject(object); // { foo: { bar: 2 } }
 
 ## Reference(s)
 
-- Glossary [Recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
+- Concept [Recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
 
 ## Solution(s)
 
