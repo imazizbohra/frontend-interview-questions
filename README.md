@@ -15,6 +15,7 @@ Collection of frontend interview questions
 - [Medium - Javascript Functions](./javascript/javascript-functions/medium/)
 - [Medium - NodeJS Functions](./javascript/nodejs-functions/medium/)
 - [Medium - Prototype Functions](./javascript/prototype-functions/medium/)
+- [Medium - Template Engine Functions](./javascript/template-engine-functions/medium/)
 - [Medium - Test Runner Functions](./javascript/test-runner-functions/medium/)
 - [Medium - Utility Functions](./javascript/utility-functions/medium/)
 
