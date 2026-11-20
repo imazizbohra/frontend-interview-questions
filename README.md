@@ -7,15 +7,16 @@ Collection of frontend interview questions
 - [Easy - Design Pattern](./javascript/design-pattern/easy/)
 - [Easy - Javascript Functions](./javascript/javascript-functions/easy/)
 - [Easy - jQuery Functions](./javascript/jquery-functions/easy/)
-- [Easy - Lodash Functions](./javascript/lodash-functions/easy/)
 - [Easy - Promise Functions](./javascript/promise-functions/easy/)
 - [Easy - Prototype Functions](./javascript/prototype-functions/easy/)
+- [Easy - Utility Functions](./javascript/utility-functions/easy/)
 - [Medium - Design Pattern](./javascript/design-pattern/medium/)
 - [Medium - DOM Traversal Functions](./javascript/dom-traversal-functions/medium/)
 - [Medium - Javascript Functions](./javascript/javascript-functions/medium/)
-- [Medium - Lodash Functions](./javascript/lodash-functions/medium/)
 - [Medium - NodeJS Functions](./javascript/nodejs-functions/medium/)
 - [Medium - Prototype Functions](./javascript/prototype-functions/medium/)
+- [Medium - Test Runner Functions](./javascript/test-runner-functions/medium/)
+- [Medium - Utility Functions](./javascript/utility-functions/medium/)
 
 ## React
 
