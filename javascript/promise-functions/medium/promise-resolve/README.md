@@ -10,7 +10,7 @@ A "thenable" is an interface that implements the `.then()` method, which is call
 
 Implement the `Promise.resolve()` function as `promiseResolve`. You can ignore the case where this is referenced within the implemented function.
 
-## Example(s)
+## Examples
 
 ```ts
 // Resolving a non-promise.
@@ -31,12 +31,12 @@ const resolvedThenable = promiseResolve({
 await resolvedThenable; // 42
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function promiseResolve(value: any): Promise<any> {

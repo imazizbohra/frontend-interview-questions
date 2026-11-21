@@ -9,7 +9,7 @@ Note that the hook can be called again with different values after the initial c
 
 The primary benefit of `useTimeout` is that you do not have to manually call `clearTimeout()` if the component unmounts before the timer expires.
 
-## Argument(s)
+## Arguments
 
 - callback: () => void: A function to be called after the specified delay
 - delay: number | null: The delay in milliseconds before invoking the callback function. If null, the timeout is cleared
@@ -25,7 +25,7 @@ Nothing.
 - Passing null for delay should clear the timeout and avoid scheduling a new one.
 - Clean up the timeout when the component unmounts or when delay changes.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -41,11 +41,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useEffect, useRef } from "react";

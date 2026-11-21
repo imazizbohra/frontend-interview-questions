@@ -13,7 +13,7 @@ The execution should be **asynchronous** and **sequential**, similar to how midd
 
 The composed function can be called multiple times, including concurrently, and each invocation should traverse the middleware chain independently. If `context` is omitted, use an empty object.
 
-## Example(s)
+## Examples
 
 ```ts
 async function fn1(ctx, next) {
@@ -44,12 +44,12 @@ console.log(context.stack);
 // ['fn1-start', 'fn2-start', 'fn3-start', 'fn3-end', 'fn2-end', 'fn1-end']
 ```
 
-## Reference(s)
+## References
 
 - Concept [Middleware](https://developer.mozilla.org/en-US/docs/Glossary/Middleware)
 - Design Pattern [middleware](https://www.patterns.dev/vanilla/mediator-pattern/)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type MiddlewareFn =

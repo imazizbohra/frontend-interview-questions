@@ -2,7 +2,7 @@
 
 Implement a function `makeCounter` that accepts an optional integer value and returns a function. When the returned function is called initially, it returns the initial value if provided, otherwise 0. The returned function can be called repeatedly to return one more than the return value of the previous invocation.
 
-## Argument(s)
+## Arguments
 
 initialValue (number): Value of counter to start with.
 
@@ -10,7 +10,7 @@ initialValue (number): Value of counter to start with.
 
 (number): Returns the value of counter at the moment.
 
-## Example(s)
+## Examples
 
 ```ts
 const counter = makeCounter();
@@ -26,12 +26,12 @@ counter(); // 6
 counter(); // 7
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
 - Operators [Increment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function makeCounter(initialValue: number = 0): () => number {

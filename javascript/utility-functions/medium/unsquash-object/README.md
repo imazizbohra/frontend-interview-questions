@@ -4,7 +4,7 @@ Implement a function that returns a new object after unsquashing a flat object w
 
 This is the reverse operation of the [Squash Object](../squash-object/) question.
 
-## Example(s)
+## Examples
 
 ```ts
 const object = {
@@ -74,11 +74,11 @@ unsquashObject(object); // { foo: { bar: 2 } }
 - Array-like paths (`a.0`, `a.1`) should produce arrays.
 - Conflicting keys (for example both `a` and `a.b`) are ambiguous. In JavaScript object insertion order, later assignments can overwrite earlier structures.
 
-## Reference(s)
+## References
 
 - Concept [Recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1: Recursion

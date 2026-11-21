@@ -2,7 +2,7 @@
 
 Implement a `useThrottle` hook that returns a throttled version of value that updates at most once every interval milliseconds.
 
-## Argument(s)
+## Arguments
 
 - `value`: The value to throttle
 - `interval`: number: The interval in milliseconds. This defaults to 500 milliseconds
@@ -18,7 +18,7 @@ The hook returns the throttled value.
 - If several values arrive during the same throttle window, the trailing update should publish the latest one.
 - Clean up any pending timeout when the hook unmounts.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -38,11 +38,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useEffect, useRef } from "react";

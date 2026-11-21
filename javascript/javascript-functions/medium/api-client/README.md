@@ -10,7 +10,7 @@ In this question, implement `createAPI(baseURL)`. It should return an object wit
 
 Each call to api.url(path) should create a fresh request builder for that path.
 
-## Example(s)
+## Examples
 
 ```ts
 const api = createAPI('https://example.com/');
@@ -57,11 +57,11 @@ api
 - Inputs are guaranteed valid.
 - You do not need query params, retries, interceptors, response parsing, or automatic JSON serialization in this question.
 
-## Reference(s)
+## References
 
 - Web API [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type HeadersMap = Record<string, string>;

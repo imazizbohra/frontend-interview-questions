@@ -12,7 +12,7 @@ This first question is intentionally limited:
 - Specs are synchronous.
 - The only matcher is `toBe()` with chainable `.not`.
 
-## Example(s)
+## Examples
 
 ```ts
 const { spec, check, run } = createTestRunner();
@@ -72,12 +72,12 @@ run();
 - Keep the only matcher as toBe() with chainable .not.
 - You do not need nested suites, hooks, async specs, skipped tests, snapshots, mocks, spies, or console output.
 
-## Reference(s)
+## References
 
 - Jest [jestjs.io](https://jestjs.io/)
 - vitest [vitest.dev](https://vitest.dev/)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type RunResult = {

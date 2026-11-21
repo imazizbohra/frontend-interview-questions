@@ -4,7 +4,7 @@
 
 Implement `Array.prototype.reduce`. To avoid overwriting the actual `Array.prototype.reduce`, which is being used by the autograder, implement it as `Array.prototype.myReduce`.
 
-## Example(s)
+## Examples
 
 ```ts
 [1, 2, 3].myReduce((prev, curr) => prev + curr, 0); // 6
@@ -15,11 +15,11 @@ Implement `Array.prototype.reduce`. To avoid overwriting the actual `Array.proto
 
 There are some nuances in how `Array.prototype.reduce` works and what values are passed to the reducer callback. Read the specification for `Array.prototype.reduce` on MDN Docs before attempting.
 
-## Reference(s)
+## References
 
 - Array [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

@@ -6,7 +6,7 @@ This is useful when combining grouped records or collecting results produced in 
 
 Implement a function `flatten` that returns a newly created array with all subarray elements concatenated recursively into a single level.
 
-## Example(s)
+## Examples
 
 ```ts
 // Single-level arrays are unaffected.
@@ -23,12 +23,12 @@ flatten([
 flatten([1, [2, [3, [4, [5]]]]]); // [1, 2, 3, 4, 5]
 ```
 
-## Reference(s)
+## References
 
 - Array [flat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 - Lodash [_.flattenDeep](https://lodash.com/docs/4.18.1#flattenDeep)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1: Recursive

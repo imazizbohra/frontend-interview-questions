@@ -4,7 +4,7 @@ Real-time collaboration apps like Google Docs and Figma often sync actions betwe
 
 Implement `correspondingNodeAcrossPages(rootA, rootB, target)`, which takes the root nodes of two pages with the same DOM structure and a `target` node inside `rootA`, then returns the node in `rootB` at the same relative position.
 
-## Argument(s)
+## Arguments
 
 `correspondingNodeAcrossPages(rootA, rootB, target)`
 
@@ -16,7 +16,7 @@ Implement `correspondingNodeAcrossPages(rootA, rootB, target)`, which takes the 
 
 Returns the node in `rootB` that appears at the same relative position as target in `rootA`.
 
-## Example(s)
+## Examples
 
 ```ts
 const pageA = new DOMParser().parseFromString(
@@ -104,11 +104,11 @@ correspondingNodeAcrossPages(pageA.body, pageB.body, target);
 - DOM APIs
 - Traversing descendants with `node.childNodes`
 
-## Reference(s)
+## References
 
 - Web API [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1: Recursion

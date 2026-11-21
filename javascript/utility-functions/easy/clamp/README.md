@@ -2,7 +2,7 @@
 
 Implement `clamp(value, lower, upper)` to restrict value to the inclusive range between `lower` and `upper`.
 
-## Argument(s)
+## Arguments
 
 - value (number): The number to clamp.
 - lower (number): The lower bound.
@@ -12,7 +12,7 @@ Implement `clamp(value, lower, upper)` to restrict value to the inclusive range 
 
 (number): Returns value if it is within the range, lower if it is smaller, or upper if it is larger.
 
-## Example(s)
+## Examples
 
 ```ts
 // Within the bounds, return as-is.
@@ -25,11 +25,11 @@ clamp(-10, -3, 5); // => -3
 clamp(10, -5, 5); // => 5
 ```
 
-## Reference(s)
+## References
 
 Lodash [_.clamp](https://lodash.com/docs/4.18.1#clamp)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

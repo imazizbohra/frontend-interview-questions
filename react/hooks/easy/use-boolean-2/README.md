@@ -2,7 +2,7 @@
 
 This is a follow-up to `useBoolean`. In this version, the boolean behavior stays the same, but the returned methods should be memoized so that each method keeps the same function instance across re-renders.
 
-## Argument(s)
+## Arguments
 
 initialValue: boolean: Initial value of the boolean state. If not provided, it should default to false.
 
@@ -16,7 +16,7 @@ The `useBoolean` hook returns an object with the following properties:
 
 `setTrue` and `setFalse` must be the same function instance across re-renders.
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -32,12 +32,12 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 - React [useCallback](https://react.dev/reference/react/useCallback)
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useCallback } from 'react';  

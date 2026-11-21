@@ -2,7 +2,7 @@
 
 Implement a `useCountdown` hook that manages a countdown.
 
-## Argument(s)
+## Arguments
 
 The hook accepts an object with the following properties:
 
@@ -27,7 +27,7 @@ The hook returns an object with the following properties:
 - reset() should stop the countdown and return count to countStart.
 - The interval should clean itself up when the hook unmounts or when the countdown stops.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -44,11 +44,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useCallback, useEffect, useState } from "react";

@@ -7,7 +7,7 @@ Implement a function `makeCounter` that accepts an optional integer value (defau
 - `decrement()`: decrements the current value and returns it.
 - `reset()`: resets the current value to the initial value and returns it.
 
-## Example(s)
+## Examples
 
 ```ts
 const counter = makeCounter();
@@ -33,13 +33,13 @@ counter.increment(); // 6
 
 Each call to makeCounter() should create an independent counter.
 
-## Reference(s)
+## References
 
 - JavaScript [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
 - Operators [Increment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
 - Operators [Decrement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

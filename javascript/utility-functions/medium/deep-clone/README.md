@@ -14,7 +14,7 @@ Implement `deepClone(value)` so it returns a deep copy of a JSON-serializable va
 
 `(*)`: Returns a deep copy of value.
 
-## Example(s)
+## Examples
 
 ```ts
 const obj1 = { user: { role: 'admin' } };
@@ -32,13 +32,13 @@ obj2.foo[0].bar; // 'bax'
 clonedObj2.foo[0].bar; // Should still be 'baz'.
 ```
 
-## Reference(s)
+## References
 
 - Concept [deep copy](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy)
 - Window [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone)
 - Lodash [_.cloneDeep](https://lodash.com/docs/4.18.1#cloneDeep)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function deepClone<T>(value: T): T {

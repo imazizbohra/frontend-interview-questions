@@ -8,7 +8,7 @@ Implement a method `getElementsByStyle()` that finds DOM elements that are rende
 
 Do not use `document.querySelectorAll()`, which would make the problem trivial. You will not be allowed to use it during real interviews.
 
-## Example(s)
+## Examples
 
 ```ts
 const doc = new DOMParser().parseFromString(
@@ -31,13 +31,13 @@ getElementsByStyle(doc.body, 'font-size', '12px');
 - Reading computed styles with `getComputedStyle()`
 - Traversing descendants with `element.children`
 
-## Reference(s)
+## References
 
 - HTMLElement [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
 - Web API [NodeIterator](https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator)
 - Web API [CSSStyleProperties](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleProperties)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

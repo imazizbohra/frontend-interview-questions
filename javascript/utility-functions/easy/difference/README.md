@@ -4,7 +4,7 @@ Implement `difference(array, values)` so it returns a new array containing the v
 
 For this question, treat NaN values as equal and skip empty slots in sparse arrays.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to inspect.
 - values (Array): The values to exclude.
@@ -13,7 +13,7 @@ For this question, treat NaN values as equal and skip empty slots in sparse arra
 
 (Array): Returns the new array of filtered values.
 
-## Example(s)
+## Examples
 
 ```ts
 difference([1, 2, 3], [2, 3]); // => [1]
@@ -24,7 +24,7 @@ difference([1, , 3], [1]); // => [3]
 difference([1, 2, 3], []); // => [1, 2, 3]
 ```
 
-## Reference(s)
+## References
 
 - Operators [in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
 - Array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
@@ -32,7 +32,7 @@ difference([1, 2, 3], []); // => [1, 2, 3]
 - JavaScript [Same-value-zero equality](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality)
 - Lodash [_.difference](https://lodash.com/docs/4.18.1#difference)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

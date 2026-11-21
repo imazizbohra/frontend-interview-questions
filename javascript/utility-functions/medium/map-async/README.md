@@ -8,7 +8,7 @@ Implement a function `mapAsync` that accepts an array of items and maps each ele
 
 **Note**: Similar to [Promise.all()](../../../promise-functions/medium/promise-all/)
 
-## Example(s)
+## Examples
 
 ```ts
 const asyncDouble = (x: number) =>
@@ -22,11 +22,11 @@ const doubled = await mapAsync([1, 2], asyncDouble);
 console.log(doubled); // [2, 4]
 ```
 
-## Reference(s)
+## References
 
 - Array [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function mapAsync<T, U>(

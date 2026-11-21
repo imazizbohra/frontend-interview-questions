@@ -25,7 +25,7 @@ function getFirstName(user) {
 
 Doing `getFirstName(john)` works, but `getFirstName(jane)` will throw an error because the name property doesn't exist for jane.profile.
 
-## Argument(s)
+## Arguments
 
 - object (Object): The object to query.
 - path (string | Array<string | number>): The path to the property to get.
@@ -35,7 +35,7 @@ Doing `getFirstName(john)` works, but `getFirstName(jane)` will throw an error b
 
 (*): Returns the resolved value, defaultValue, or undefined.
 
-## Example(s)
+## Examples
 
 ```ts
 // Using the `john` and `jane` objects from above.
@@ -56,12 +56,12 @@ get({ a: { b: true } }, 'a.b.c'); // => undefined
 get({}, 'a.b', 'fallback'); // => 'fallback'
 ```
 
-## Reference(s)
+## References
 
 - Jest [getType](https://github.com/jestjs/jest/blob/main/packages/jest-get-type/src/index.ts)
 - Lodash [_.get](https://lodash.com/docs/4.18.1#get)
 
-## Solution(s)
+## Solutions
 
 ```ts
 const isPrimitive = (

@@ -6,7 +6,7 @@ Implement `Array.prototype.with`. To avoid overwriting the actual `Array.prototy
 
 Negative indices count from the end of the array. If the index is out of range, `myWith` should throw a `RangeError`.
 
-## Example(s)
+## Examples
 
 ```ts
 [1, 2, 3].myWith(1, 9); // [1, 9, 3]
@@ -25,11 +25,11 @@ values; // [1, 2, 3]
 - Array-like objects, sparse-array edge cases, and specification-heavy coercion behavior are out of scope.
 - Throw a RangeError when index is smaller than -array.length or greater than or equal to array.length.
 
-## Reference(s)
+## References
 
 - Array [with](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with)
 
-## Solution(s)
+## Solutions
 
 ```ts
 Array.prototype.myWith = function <T>(this: T[], index: number, value: T): T[] {

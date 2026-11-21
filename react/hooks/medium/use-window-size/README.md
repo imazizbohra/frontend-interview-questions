@@ -2,7 +2,7 @@
 
 Implement a `useWindowSize` hook that returns the current height and width of the window (`window.innerHeight` and `window.innerWidth`). It should re-render the component if the window size changes.
 
-## Argument(s)
+## Arguments
 
 Nothing.
 
@@ -20,7 +20,7 @@ The hook returns an object with the following properties:
 - Listen for `resize` events and clean up the listener when the hook unmounts.
 - The hook assumes a browser-like environment where `window` exists.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -35,11 +35,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useEffect, useCallback } from "react";

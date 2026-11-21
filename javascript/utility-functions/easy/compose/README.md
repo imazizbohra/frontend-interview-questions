@@ -6,7 +6,7 @@ If no functions are passed to `compose`, return a new function that simply retur
 
 You may assume that all the functions accept a single parameter.
 
-## Example(s)
+## Examples
 
 ```ts
 const add1 = (num) => num + 1;
@@ -17,12 +17,12 @@ const composedFn = compose(subtract10, double, add1);
 composedFn(3); // (3 + 1) * 2 - 10 => -2
 ```
 
-## Reference(s)
+## References
 
 - Array [reduceRight](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight)
 - Lodash [_.flow](https://lodash.com/docs/4.18.1#flow)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1 

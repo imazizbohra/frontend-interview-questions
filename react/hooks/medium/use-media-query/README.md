@@ -2,7 +2,7 @@
 
 Implement a `useMediaQuery` hook that subscribes to and responds to media query changes (e.g. screen size, resolution, orientation, etc.).
 
-## Argument(s)
+## Arguments
 
 `query: string`: The media query to match. It must be a [valid CSS media query string](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 
@@ -17,7 +17,7 @@ The hook returns a `boolean` value that indicates whether the media query matche
 - If `query` changes, unsubscribe from the old `MediaQueryList` and subscribe to the new one.
 - You do not need a separate `resize` listener.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -27,14 +27,14 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 - Web API [matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
 - Web API [MediaQueryList](https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList)
 - React [useSyncExternalStore](https://react.dev/reference/react/useSyncExternalStore)
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

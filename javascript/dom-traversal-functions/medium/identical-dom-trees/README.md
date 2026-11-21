@@ -4,7 +4,7 @@ Implement a function `identicalDOMTrees` that checks if two DOM trees are identi
 
 Two DOM trees are considered identical if they are structurally similar, and the DOM nodes in one tree have the exact same attributes as the nodes in the same relative positions in the other tree.
 
-## Example(s)
+## Examples
 
 Tree A and Tree B are considered the same.
 
@@ -26,7 +26,7 @@ Tree C and Tree D are considered different.
 <div id="foo">Hello World</div>
 ```
 
-## Reference(s)
+## References
 
 - Web API [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 - Node [isEqualNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode)
@@ -36,7 +36,7 @@ Tree C and Tree D are considered different.
 - Web API [Text](https://developer.mozilla.org/en-US/docs/Web/API/Text)
 - Web API [CharacterData](https://developer.mozilla.org/en-US/docs/Web/API/CharacterData)
 
-## Solution(s)
+## Solutions
 
 ```ts
 const isEqualNamedNodeMap = (map1: NamedNodeMap, map2: NamedNodeMap) => {

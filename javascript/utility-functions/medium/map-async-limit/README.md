@@ -6,7 +6,7 @@ This can map an input array to API results, with each element used as the API ar
 
 Implement a `mapAsyncLimit` function that takes an optional `size` parameter, which is the maximum number of ongoing async tasks, so the input array can be processed in chunks of `size`, achieving parallelism while staying within the provided limit. If `size` is not specified, the chunk size is unlimited. If any promise returned by the mapping function rejects, the returned promise should `reject` with the same `reason`.
 
-## Example(s)
+## Examples
 
 ```ts
 async function fetchUpperCase(q: string) {
@@ -24,11 +24,11 @@ const results = await mapAsyncLimit(
 console.log(results); // ['FOO', 'BAR', 'QUX', 'QUZ'];
 ```
 
-## Reference(s)
+## References
 
 - Javascript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function mapAsyncLimit<T, U>(

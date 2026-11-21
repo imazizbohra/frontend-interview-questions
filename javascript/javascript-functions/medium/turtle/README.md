@@ -10,7 +10,7 @@ Implement a `Turtle` class in JavaScript that simulates the movement of a turtle
 - `right()`: Rotates the turtle in-place 90 degrees to the right, changing only the direction it is facing.
 - `position()`: Returns the coordinates of the turtle as `[x, y]`.
 
-## Example(s)
+## Examples
 
 ```ts
 const turtle = new Turtle();
@@ -24,12 +24,12 @@ turtle.forward(2); // Position: [2, 0] because it moved 2 units to the right.
 turtle.right().right().forward(5); // Position: [-3, 0] because it turned 180 degrees and moved 5 units forward (toward the left).
 ```
 
-## Reference(s)
+## References
 
 - Python [turtle](https://docs.python.org/3/library/turtle.html)
 
 
-## Solution(s)
+## Solutions
 
 ```ts
 const DIRECTION = {

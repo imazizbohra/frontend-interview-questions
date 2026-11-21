@@ -4,7 +4,7 @@ Implement a function `fromPairs(pairs)` that transforms a list of key-value pair
 
 Process pairs in order. If a key appears more than once, the later pair overwrites the earlier value.
 
-## Argument(s)
+## Arguments
 
 pairs (Array): An array of key-value pairs.
 
@@ -12,7 +12,7 @@ pairs (Array): An array of key-value pairs.
 
 (Object): Returns the object composed from the key-value pairs.
 
-## Example(s)
+## Examples
 
 ```ts
 const pairs = [
@@ -24,12 +24,12 @@ const pairs = [
 fromPairs(pairs); // => { a: 1, b: 2, c: 3 }
 ```
 
-## Reference(s)
+## References
 
 - Object [fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
 - Lodash [_.fromPairs](https://lodash.com/docs/4.18.1#fromPairs)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function fromPairs<T>(

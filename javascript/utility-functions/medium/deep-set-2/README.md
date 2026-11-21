@@ -30,7 +30,7 @@ Intermediate traversal rules stay the same as the previous question:
 - `path (string | Array<string | number>)`: The non-empty path where the value should be written. Array indices may be non-negative integers or canonical numeric strings such as `'0'` and `'12'`.
 - `value (unknown)`: The value to write or merge at the target path.
 
-## Example(s)
+## Examples
 
 Merge plain objects at the leaf.
 
@@ -113,12 +113,12 @@ deepSet(object, 'settings.theme', 'dark');
   - Immutable writes are out of scope.
   - Special object types and cycle handling are out of scope.
 
-## Reference(s)
+## References
 
 - Github [dset](https://github.com/lukeed/dset)
 - Lodash [_.set](https://lodash.com/docs/4.18.1#set)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type PathSegment = string | number;

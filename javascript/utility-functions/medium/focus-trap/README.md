@@ -12,7 +12,7 @@ The returned trap should:
 - If focus is outside while the trap is active, move it to the first tabbable element on Tab and the last on Shift+Tab.
 - Stop trapping once `deactivate()` is called.
 
-## Argument(s)
+## Arguments
 
 `createFocusTrap(container)`
 
@@ -28,7 +28,7 @@ Activates the trap and moves focus to the first tabbable descendant inside conta
 `trap.deactivate()`
 Deactivates the trap and removes its keyboard listeners.
 
-## Example(s)
+## Examples
 
 ```ts
 const modal = document.querySelector('#modal');
@@ -51,11 +51,11 @@ trap.deactivate();
 - Repeated `activate()` or `deactivate()` calls should be safe and must not install duplicate listeners.
 - You do not need to support `Escape`, outside clicks, outside focus changes, or empty traps in this question.
 
-## Reference(s)
+## References
 
 - Github [focus-trap](https://github.com/focus-trap/focus-trap)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type FocusTrap = {

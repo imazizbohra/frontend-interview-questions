@@ -4,7 +4,7 @@ Implement a function `uniqueArray` that takes in an array and returns a duplicat
 
 Uniqueness uses SameValueZero equality: repeated NaN values are treated as equal, while objects are equal only when they are the same reference.
 
-## Argument(s)
+## Arguments
 
 array (Array): The array to inspect.
 
@@ -12,7 +12,7 @@ array (Array): The array to inspect.
 
 (Array): Returns the new duplicate free array.
 
-## Example(s)
+## Examples
 
 ```ts
 uniqueArray([1, 2, 3]); // [1, 2, 3]
@@ -20,11 +20,11 @@ uniqueArray([1, 1, 2]); // [1, 2]
 uniqueArray([2, 1, 2]); // [2, 1]
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.uniq](https://lodash.com/docs/4.18.1#uniq)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

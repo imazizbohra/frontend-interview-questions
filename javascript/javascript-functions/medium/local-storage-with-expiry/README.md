@@ -6,7 +6,7 @@ Implement a `LocalStorageWithExpiry` class that wraps `localStorage` and support
 
 This question is intentionally scoped to a small wrapper. It is not a full replacement for the native Storage API.
 
-## Example(s)
+## Examples
 
 ```ts
 const storage = new LocalStorageWithExpiry();
@@ -39,12 +39,12 @@ storage.setItem('session', 'active', {
 - Values not written by this wrapper, including malformed JSON and unrecognized stored shapes, should be treated as missing and return null.
 - You do not need to implement `removeItem()`, `clear()`, `clearExpired()`, or any other `Storage` APIs.
 
-## Reference(s)
+## References
 
 - Window [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - JavaScript [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
-## Solution(s)
+## Solutions
 
 ```ts
 const ENTRY_MARKER = "__lswe";

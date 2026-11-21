@@ -2,7 +2,7 @@
 
 Implement a `useCounter` hook that manages counter state with additional convenience utility methods.
 
-## Argument(s)
+## Arguments
 
 initialValue: number: Initial value of the counter state. If not provided, it should default to 0.
 
@@ -16,7 +16,7 @@ The useCounter hook returns an object with the following properties:
 - reset: () => void: A function to reset the counter value to initialValue, or 0 if not provided
 - setCount: A function with the same behavior as the setter returned by useState; it accepts either a number or an updater function (previousCount: number) => number
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -33,11 +33,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useCallback, Dispatch, SetStateAction } from "react";

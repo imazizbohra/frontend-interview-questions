@@ -2,7 +2,7 @@
 
 Implement a function `maxBy(array, iteratee)` that finds the element inside array with the maximum value returned by iteratee. The iteratee is invoked with one argument: (value).
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to iterate over.
 - iteratee (Function): The iteratee invoked per element.
@@ -11,7 +11,7 @@ Implement a function `maxBy(array, iteratee)` that finds the element inside arra
 
 (*): Returns the element whose iteratee result is the maximum.
 
-## Example(s)
+## Examples
 
 ```ts
 maxBy([{ n: 1 }, { n: 2 }], (o) => o.n); // => { n: 2 }
@@ -26,7 +26,7 @@ If multiple elements produce the same maximum iteratee result, return the first 
 maxBy([{ n: 1 }, { n: 2 }], (o) => o.m); // => undefined
 ```
 
-## Reference(s)
+## References
 
 - Array [from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 - Array [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -34,7 +34,7 @@ maxBy([{ n: 1 }, { n: 2 }], (o) => o.m); // => undefined
 - Javascript [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - Lodash [_.maxBy](https://lodash.com/docs/4.18.1#maxBy)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

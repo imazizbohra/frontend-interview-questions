@@ -43,7 +43,7 @@ There are some differences from the official jQuery.css() implementation:
 - Getting an inline style property that has not been set should return undefined.
 - If no element matches the selector, getters should return undefined and setters should remain chainable no-ops.
 
-## Reference(s)
+## References
 
 - jQuery [css](https://api.jquery.com/css/)
 - Javascript [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
@@ -53,7 +53,7 @@ There are some differences from the official jQuery.css() implementation:
 - Closures
 - Object chaining
 
-## Solution(s)
+## Solutions
 
 ```ts
 interface JQuery {

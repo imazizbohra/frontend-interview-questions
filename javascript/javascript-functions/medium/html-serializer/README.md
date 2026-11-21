@@ -2,7 +2,7 @@
 
 Given an object that resembles a DOM tree, implement a function that serializes the object into a formatted string with proper indentation (one tab (`\t` character) per nesting level) and one tag per line.
 
-## Example(s)
+## Examples
 
 ```ts
 const tree = {
@@ -28,11 +28,11 @@ serializeHTML(tree);
 </body>`;
 ```
 
-## Reference(s)
+## References
 
 - Concept [Recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type HTMLNode = string | HTMLElementNode;

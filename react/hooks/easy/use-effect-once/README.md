@@ -4,7 +4,7 @@ Implement a `useEffectOnce` hook that runs an effect once for the mounted compon
 
 React Strict Mode can intentionally run an extra setup and cleanup cycle in development. Do not suppress that cycle; preserving React's cleanup semantics is more important than hiding development-only diagnostics.
 
-## Argument(s)
+## Arguments
 
 effect: The function that will be executed once. This function has the same parameters and behavior as the first argument of useEffect
 
@@ -12,7 +12,7 @@ effect: The function that will be executed once. This function has the same para
 
 Nothing, just like useEffect.
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -28,12 +28,12 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 - React [useEffect](https://react.dev/reference/react/useEffect)
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useEffect, EffectCallback } from "react";

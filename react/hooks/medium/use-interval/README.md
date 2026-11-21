@@ -2,7 +2,7 @@
 
 Implement a `useInterval` hook that creates an interval that invokes a callback function at a specified delay.
 
-## Argument(s)
+## Arguments
 
 - `callback: () => void`: A function to be called at the specified interval
 - `delay: number | null`: The delay in milliseconds between each invocation of the callback function. If `null`, the interval is cleared
@@ -18,7 +18,7 @@ Nothing.
 - The first `callback` invocation happens after the first interval `delay`, not immediately.
 - Clean up the interval when the component unmounts or when `delay` changes.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -34,11 +34,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useRef, useEffect } from "react";

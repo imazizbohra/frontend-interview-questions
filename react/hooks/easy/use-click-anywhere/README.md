@@ -2,7 +2,7 @@
 
 Implement a `useClickAnywhere` hook that handles click events anywhere in the browser window.
 
-## Argument(s)
+## Arguments
 
 handler: (event: MouseEvent) => void: The function to be called when a click event is detected anywhere in the window
 
@@ -10,7 +10,7 @@ handler: (event: MouseEvent) => void: The function to be called when a click eve
 
 Nothing.
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -24,13 +24,13 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 - EventTarget [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - React [useEffect](https://react.dev/reference/react/useEffect)
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useEffect } from "react";

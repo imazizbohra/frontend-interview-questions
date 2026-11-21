@@ -6,7 +6,7 @@ Note: The comparison to find common elements uses the values after the iteratee 
 
 The iteratee function is invoked with one argument: value, where value is the current value being iterated.
 
-## Argument(s)
+## Arguments
 
 - iteratee (Function): The iteratee invoked per element.
 - arrays (Array): The arrays to inspect.
@@ -15,7 +15,7 @@ The iteratee function is invoked with one argument: value, where value is the cu
 
 (Array): Returns the new array of intersecting values.
 
-## Example(s)
+## Examples
 
 ```ts
 // Get the intersection based on the floor value of each number
@@ -46,11 +46,11 @@ intersectionBy(Math.floor, [1, 2.5, 3]); // => [1, 2.5, 3]
 - The function should not modify the original arrays.
 - 0 <= number of arrays <= 20.
 
-## Reference(s)
+## References
 
 - Lodash [_.intersectionBy](https://lodash.com/docs/4.18.1#intersectionBy)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

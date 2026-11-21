@@ -2,7 +2,7 @@
 
 Implement a `useCycle` hook that cycles through a sequence of values each time the returned function is called.
 
-## Argument(s)
+## Arguments
 
 The `useCycle` hook should accept an indefinite number of arguments, each representing a value in the sequence to cycle through.
 
@@ -13,7 +13,7 @@ A tuple containing the following elements:
 - value: The current value
 - cycle: A function that changes the current value to the next one in the sequence, or the first one if the current value is the last in the sequence
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -28,11 +28,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useCallback } from "react";

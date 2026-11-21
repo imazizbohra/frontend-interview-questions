@@ -4,7 +4,7 @@ The `Promise.withResolvers()` static method returns an object containing a new P
 
 This pattern can improve code readability and make it easier to manage asynchronous operations, especially when you need to resolve or reject the Promise from different parts of your code.
 
-## Example(s)
+## Examples
 
 ```ts
 function delayedGreeting(name) {
@@ -50,13 +50,13 @@ function timeoutPromise(duration) {
 timeoutPromise(2000).catch((error) => console.error(error.message)); // Output after 2 seconds: Timeout
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - Promise [withResolvers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function promiseWithResolvers<T>(): Readonly<{

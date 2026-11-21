@@ -25,7 +25,7 @@ For this question:
 
 That means the reading order is determined by sorting elements by y first, then by x.
 
-## Example(s)
+## Examples
 
 ```ts
 readingOrder([
@@ -62,7 +62,7 @@ y = 120 +------------------footer------------------+
 reading order: hero -> cta -> footer
 ```
 
-## Solution(s)
+## Solutions
 
 ```ts
 export interface CanvasElement {

@@ -13,7 +13,7 @@ Implement `throttle(func, wait)` so that func can run at most once every `wait` 
 
 (Function): Returns the throttled function.
 
-## Example(s)
+## Examples
 
 ```ts
 let i = 0;
@@ -35,7 +35,7 @@ throttledIncrement(); // i = 1
 throttledIncrement(); // i = 2
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.throttle](https://lodash.com/docs/4.18.1#throttle)
 
@@ -46,7 +46,7 @@ throttledIncrement(); // i = 2
 - How `this` works
 - Deferring a call without losing its receiver or argument list
 
-## Solution(s)
+## Solutions
 
 ```ts
 type ThrottleFunction<T extends any[]> = (...args: T) => any;

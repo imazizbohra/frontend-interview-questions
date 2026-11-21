@@ -22,7 +22,7 @@ The input objects should not be modified.
 
 Only plain objects are recursively merged. Values such as `null`, `Date`, `RegExp`, `Map`, and `Set` should be treated as leaf values.
 
-## Example(s)
+## Examples
 
 ```ts
 deepMerge({ a: 1 }, { b: 2 }); // { a: 1, b: 2 }
@@ -37,12 +37,12 @@ deepMerge({ a: 1, b: [2] }, { b: [3, 4] }); // { a: 1, b: [2, 3, 4] }
 - If a full copy of every nested object is desired, deep clone both objects before merging or deep clone the resulting object.
 - Recursing only on overlapping object keys keeps keys that exist only in `objA` intact and copies keys that exist only in `objB` directly.
 
-## Reference(s)
+## References
 
 - Concept [recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
 - Lodashs [_.merge](https://lodash.com/docs/4.18.1#merge)
 
-## Solution(s)
+## Solutions
 
 ```ts
 const isPlainObject = (value: unknown): value is Record<string, unknown> => {

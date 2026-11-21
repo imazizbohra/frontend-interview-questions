@@ -2,7 +2,7 @@
 
 Implement a function that accepts a callback and a number n, which restricts invocation of the callback to at most n times. Subsequent calls to the created function will return the result of the last invocation of the callback. The callback is invoked with the this binding and arguments from the created function.
 
-## Argument(s)
+## Arguments
 
 - n (number): The number of calls at which func is no longer invoked.
 - func (Function): The function to restrict.
@@ -11,7 +11,7 @@ Implement a function that accepts a callback and a number n, which restricts inv
 
 (Function): Returns the new restricted function.
 
-## Example(s)
+## Examples
 
 ```ts
 let i = 1;
@@ -30,11 +30,11 @@ i = 4;
 incrementByAtMostThrice(2); // i is still 4 because it is not modified; the function still returns 10.
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.before](https://lodash.com/docs/4.18.1#before)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Function signature for callback argument.

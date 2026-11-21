@@ -4,7 +4,7 @@ Sometimes it's helpful to ensure a function runs only once during the lifecycle 
 
 Implement a function that accepts a callback and restricts its invocation to at most once. Subsequent calls to the returned function will return the result of the first invocation of the callback function. The callback function is invoked with the this binding and arguments of the created function.
 
-## Example(s)
+## Examples
 
 ```ts
 let i = 1;
@@ -28,13 +28,13 @@ incrementByOnce(2); // i is still 4 as it is not modified. However, the function
 - Use a separate boolean flag instead of checking the cached value because the first result can be falsy.
 - Side effects from func should happen once as well. This is why later calls must skip func entirely rather than calling it again and discarding its result.
 
-## Reference(s)
+## References
 
 - Javascript [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
 - Operators [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - Lodash [_.once](https://lodash.com/docs/4.18.1#once)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type Fn<T> = (this: any, args: Array<any>) => T;

@@ -4,7 +4,7 @@
 
 Implement `Array.prototype.map`. To avoid overwriting the actual `Array.prototype.map`, which is being used by the autograder, implement it as `Array.prototype.myMap`.
 
-## Example(s)
+## Examples
 
 ```ts
 [1, 2, 3, 4].myMap((i) => i); // [1, 2, 3, 4]
@@ -15,11 +15,11 @@ Implement `Array.prototype.map`. To avoid overwriting the actual `Array.prototyp
 
 The map callback function receives more than just the element. `Array.prototype.map` also accepts a second parameter. Read the specification for `Array.prototype.map` on MDN Docs before attempting.
 
-## Reference(s)
+## References
 
 - Array [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-## Solution(s)
+## Solutions
 
 ```ts
 Array.prototype.myMap = function (callbackFn, thisArg) {

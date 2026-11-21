@@ -15,7 +15,7 @@ This question still keeps the engine intentionally small:
 - Arrays are out of scope.
 - Inputs are guaranteed valid.
 
-## Example(s)
+## Examples
 
 ```ts
 renderTemplate('Hello {{user.name}}!', {
@@ -49,11 +49,11 @@ renderTemplate('{{{content}}}', {
 - `false`, `0`, and `''` are valid resolved values and should still render.
 - You do not need to support sections, loops, or malformed templates in this question.
 
-## Reference(s)
+## References
 
 - String [replace](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type TemplatePrimitive = null | undefined | boolean | number | string;

@@ -4,7 +4,7 @@ Implement a `useIdle` hook that detects user inactivity for a specified duration
 
 The user is considered idle if none of the configured `events` are dispatched within `ms` milliseconds. Additionally, if the user has just returned to this tab from another tab, the user should not be considered idle.
 
-## Argument(s)
+## Arguments
 
 - `ms: number`: The number of milliseconds to wait before considering the user idle. This defaults to 60_000 (1 minute)
 - `initialState: boolean`: The initial `idle` state. This defaults to `false`
@@ -21,7 +21,7 @@ The hook returns a boolean value that indicates whether the user is idle.
 - Switching away from the tab should not by itself mark the user active.
 - Clean up all timers and event listeners when the component unmounts.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -35,11 +35,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useEffect, useRef, useState } from "react";

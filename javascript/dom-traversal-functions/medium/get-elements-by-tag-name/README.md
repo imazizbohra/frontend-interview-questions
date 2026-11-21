@@ -9,7 +9,7 @@ Implement a custom `Element.getElementsByTagName()` that is similar but slightly
 - Returns an array of `Elements` instead of an `HTMLCollection` of `Elements`.
 - Do not use `document.querySelectorAll()`, which would make the problem trivial.
 
-## Example(s)
+## Examples
 
 ```ts
 const doc = new DOMParser().parseFromString(
@@ -33,13 +33,13 @@ getElementsByTagName(doc.body, 'div');
 - Reading localName
 - Traversing descendants with `element.children`
 
-## Reference(s)
+## References
 
 - Web API [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 - Element [tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName)
 - Element [localName](https://developer.mozilla.org/en-US/docs/Web/API/Element/localName)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function getElementsByTagName(

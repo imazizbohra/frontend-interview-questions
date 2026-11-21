@@ -2,7 +2,7 @@
 
 Implement a function `chunk(array, [size=1])` that splits the input array into groups of length size and returns them in a new array. If the array can't be split evenly, the final chunk will be the remaining elements. The function should not modify the original input array.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to process.
 - [size=1] (number): The length of each chunk.
@@ -11,7 +11,7 @@ Implement a function `chunk(array, [size=1])` that splits the input array into g
 
 (Array): Returns the new array of chunks.
 
-## Example(s)
+## Examples
 
 ```ts
 chunk(['a', 'b', 'c', 'd']); // => [['a'], ['b'], ['c'], ['d']]
@@ -23,12 +23,12 @@ chunk([1, 2, 3, 4], 3); // => [[1, 2, 3], [4]]
 
 The function should return an empty array if the array argument is empty.
 
-## Reference(s)
+## References
 
 - Array [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 - Lodash [_.chunk](https://lodash.com/docs/4.18.1#chunk)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

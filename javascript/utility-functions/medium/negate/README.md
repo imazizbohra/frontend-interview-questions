@@ -2,7 +2,7 @@
 
 Implement a function `negate(predicate)` that creates a wrapper that negates the result of the predicate function. The predicate is invoked with the this binding and arguments of the created function.
 
-## Argument(s)
+## Arguments
 
 predicate (Function): The predicate to negate.
 
@@ -10,7 +10,7 @@ predicate (Function): The predicate to negate.
 
 (Function): Returns the new negated function.
 
-## Example(s)
+## Examples
 
 ```ts
 const isOdd = negate(isEven);
@@ -18,7 +18,7 @@ isOdd(1); // => true
 isOdd(2); // => false
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.chunk](https://lodash.com/docs/4.18.1#negate)
 
@@ -29,7 +29,7 @@ isOdd(2); // => false
 - Handling variadic arguments
 - Forwarding `this` and arguments before negating the predicate result
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function negate<P extends Array<any>>(

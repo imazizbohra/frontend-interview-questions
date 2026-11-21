@@ -8,7 +8,7 @@ Implement `useQuery(queryKey, fn)` to share pending requests and cache successfu
 
 Both components use the key "user-name:42", so only one fetch should start. Both receive its result. Mounting another component with that key after success should reuse the cached result.
 
-## Argument(s)
+## Arguments
 
 - `queryKey: string`: The cache key. Include every input that changes the requested data. Equal strings identify the same query; different strings identify independent queries.
 - `fn: () => Promise<T>`: A function that produces the data. Callers using the same key must request interchangeable data of the same type. The first caller's function starts a missing query.
@@ -44,7 +44,7 @@ Starting to observe a different query resets the state to `{ status: 'loading' }
 - Cache expiration, invalidation, background refetching, cancellation, and persistence across page reloads are outside this question's scope.
 - A Context-based cache is an optional alternative covered in the solution; a provider is not required for this implementation.
 
-## Example(s)
+## Examples
 
 ```tsx
 function UserName({ userId }) {
@@ -75,11 +75,11 @@ export default function App() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { DependencyList, useState, useEffect, useCallback } from "react";

@@ -2,7 +2,7 @@
 
 Implement your own `Function.prototype.apply` without calling the native apply method. To avoid overwriting the actual `Function.prototype.apply`, implement the function as `Function.prototype.myApply`.
 
-## Example(s)
+## Examples
 
 ```ts
 function multiplyAge(multiplier = 1) {
@@ -21,7 +21,7 @@ multiplyAge.myApply(mary); // 21
 multiplyAge.myApply(john, [2]); // 84
 ```
 
-## Reference(s)
+## References
 
 - Operators [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - Operators [delete](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
@@ -31,7 +31,7 @@ multiplyAge.myApply(john, [2]); // 84
 - Global Object [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - Function [apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
-## Solution(s)
+## Solutions
 
 ```ts
 Function.prototype.myApply = function (thisArg, args) {

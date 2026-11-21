@@ -2,7 +2,7 @@
 
 Implement a `useQuery` hook that manages a promise that can be used to fetch data.
 
-## Argument(s)
+## Arguments
 
 - `fn: () => Promise`: A function that returns a promise
 - `deps: DependencyList`: An array of dependencies, similar to the second argument of `useEffect`. Unlike `useEffect`, this defaults to `[]`
@@ -27,7 +27,7 @@ The hook returns an object that has different properties depending on the state 
 - Unmounting should prevent pending promise callbacks from updating state.
 - The hook does not need caching, retries, request deduplication, or cancellation of the underlying async operation.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component({ param }) {
@@ -53,11 +53,11 @@ export default function Component({ param }) {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import {

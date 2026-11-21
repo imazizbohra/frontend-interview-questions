@@ -11,7 +11,7 @@ Implement the following utility functions to determine the types of primitive va
 - isSymbol(value): Return true if value is a symbol primitive, false otherwise.
 - isUndefined(value): Return true if value is undefined, false otherwise.
 
-## Reference(s)
+## References
 
 - Operators [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 - Object [getPrototypeOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
@@ -20,7 +20,7 @@ Implement the following utility functions to determine the types of primitive va
 - Jest [getType](https://github.com/jestjs/jest/blob/main/packages/jest-get-type/src/index.ts)
 
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

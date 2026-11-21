@@ -18,7 +18,7 @@ The function should mutate `obj` in place by writing `value` at `path`. If part 
   - An array path can contain strings and numbers, such as `['user', 'profile', 'name']` or `['items', 0, 'label']`.
 - `value` (`unknown`): The value to write at the target path.
 
-## Example(s)
+## Examples
 
 Write into nested objects.
 
@@ -88,12 +88,12 @@ deepSet(object, 'config.theme.name', 'dark');
   - The function should mutate the input object instead of returning a new one.
   - Production-hardening details like prototype-pollution protection are out of scope.
 
-## Reference(s)
+## References
 
 - Github [dset](https://github.com/lukeed/dset)
 - Lodash [_.set](https://lodash.com/docs/4.18.1#set)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type PathSegment = string | number;

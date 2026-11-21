@@ -25,7 +25,7 @@ Keep the problem scoped:
 - Inputs are guaranteed valid.
 - Path escaping and validation are out of scope.
 
-## Argument(s)
+## Arguments
 
 `objectUpdate(source, path, value)` accepts the following arguments:
 
@@ -39,7 +39,7 @@ Keep the problem scoped:
 
 Returns a new object with the updated value written at `path`.
 
-## Example(s)
+## Examples
 
 ```ts
 const state = {
@@ -100,11 +100,11 @@ next.form.sections[0].title; // 'Account'
 - Storing a function as the direct leaf value is out of scope because every function is treated as an updater.
 - You do not need to support invalid-path errors, sparse-array behavior, or escaped path tokens.
 
-## Reference(s)
+## References
 
 - Lodash [_.set](https://lodash.com/docs/4.18.1#set)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function objectUpdate<T extends Record<string, unknown>>(

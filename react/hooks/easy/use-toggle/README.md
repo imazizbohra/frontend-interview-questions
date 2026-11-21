@@ -2,7 +2,7 @@
 
 Implement a `useToggle` hook that manages a boolean toggle state in React components.
 
-## Argument(s)
+## Arguments
 
 defaultValue: boolean (optional): The initial value of the toggle state. If not provided, it should default to false
 
@@ -14,7 +14,7 @@ A tuple containing the following elements:
 - toggle: () => void: A function that toggles the state between true and false
 - setValue: A function that sets the state to the provided value. It has the same signature as the second argument of the useState hook
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -31,12 +31,12 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 - React [useRef](https://react.dev/reference/react/useRef)
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { Dispatch, SetStateAction, useState } from "react";

@@ -2,7 +2,7 @@
 
 Implement a function `rangeRight([start=0], end, [step=1])` that creates an array of numbers progressing from start up to (but not including) end with a specified step, similar to [range](../range/), but in descending order.
 
-## Argument(s)
+## Arguments
 
 - start (Number): The start of the range.
 - end (Number): The end of the range.
@@ -12,7 +12,7 @@ Implement a function `rangeRight([start=0], end, [step=1])` that creates an arra
 
 (Array): Returns the range of numbers.
 
-## Example(s)
+## Examples
 
 ```ts
 rangeRight(4); // => [3, 2, 1, 0]
@@ -29,11 +29,11 @@ The function should return an empty array if start is equal to end.
 range(0); // => []
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.rangeRight](https://lodash.com/docs/4.18.1#rangeRight)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function range(

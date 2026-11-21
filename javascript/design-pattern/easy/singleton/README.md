@@ -9,7 +9,7 @@ The Singleton pattern is used when you want to ensure that a class has only one 
 
 Implement the GlobalMap module in JavaScript using the Singleton pattern. The GlobalMap module exports an object that has a single getInstance() method that returns a Map object that can be used as a key/value store for global caching/memoization.
 
-## Example(s)
+## Examples
 
 ```ts
 // fileA.js
@@ -29,11 +29,11 @@ const gbMap = GlobalMap.getInstance();
 console.log(gbMap.get('count')); // 42
 ```
 
-## Reference(s)
+## References
 
 - patterns.dev [singleton-pattern](https://www.patterns.dev/vanilla/singleton-pattern/)
 
-## Solution(s)
+## Solutions
 
 ```ts
 class GlobalMap {

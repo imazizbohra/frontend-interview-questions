@@ -2,7 +2,7 @@
 
 Implement `compact(array)` so it creates a new array with all falsy values removed. This includes false, null, 0, '', undefined, NaN, and empty slots in sparse arrays. Do not modify the original array.
 
-## Argument(s)
+## Arguments
 
 array (Array): The array to compact.
 
@@ -10,7 +10,7 @@ array (Array): The array to compact.
 
 (Array): Returns the new array of filtered values.
 
-## Example(s)
+## Examples
 
 ```ts
 compact([0, 1, false, 2, '', 3, null]); // => [1, 2, 3]
@@ -18,14 +18,14 @@ compact(['hello', 123, [], {}]); // => ['hello', 123, [], {}]
 compact([1, , null, 2, , 3]); // => [1, 2, 3]
 ```
 
-## Reference(s)
+## References
 
 - Javascript [falsy values](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 - Javascript [truthy values](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
 - Operators [in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
 - Lodash [_.compact](https://lodash.com/docs/4.18.1#compact)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

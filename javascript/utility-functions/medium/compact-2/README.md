@@ -4,7 +4,7 @@ Implement a function `compact(value)` that returns a new object with all falsy v
 
 The values `false`, `null`, `0`, `''`, `undefined`, and `NaN` are falsy.
 
-## Argument(s)
+## Arguments
 
 `value (Array|Object)`: The array/object to compact.
 
@@ -12,19 +12,19 @@ The values `false`, `null`, `0`, `''`, `undefined`, and `NaN` are falsy.
 
 `(Array|Object)`: Returns the new compact array/object.
 
-## Example(s)
+## Examples
 
 ```ts
 compact([0, 1, false, 2, '', 3, null]); // => [1, 2, 3]
 compact({ foo: true, bar: null }); // => { foo: true }
 ```
 
-## Reference(s)
+## References
 
 - Array [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 - Lodash [_.compact](https://lodash.com/docs/4.18.1#compact)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function compact<T extends Array<any> | Object>(value: T): T {

@@ -8,7 +8,7 @@ The function should support a few options as the second parameter:
 - `length`: Shows only the first length items, using "and X other(s)" for the remaining. Ignore invalid values (negative, 0, etc.).
 - `unique`: Removes duplicate items.
 
-## Example(s)
+## Examples
 
 ```ts
 listFormat([]); // ''
@@ -45,14 +45,14 @@ listFormat(['Bob', 'Ben', 'Tim', 'Jane', 'John'], {
 listFormat(['Bob', 'Ben', '', '', 'John']); // 'Bob, Ben and John'
 ```
 
-## Reference(s)
+## References
 
 - Array [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 - Array [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 - Array [from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 - Javascript [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function listFormat(

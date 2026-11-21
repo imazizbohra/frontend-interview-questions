@@ -4,7 +4,7 @@ Implement a `useDebounce` hook that delays state updates until a specified `dela
 
 The observable outcome of using `useDebounce` is quite similar to React's `useDeferredValue`; the former returns an updated value after a fixed duration, while the latter always returns the updated value but relies on React's priority system for DOM updates.
 
-## Argument(s)
+## Arguments
 
 - value: The value to debounce
 - delay: number: The delay in milliseconds
@@ -20,7 +20,7 @@ The hook returns the debounced value.
 - If value changes again before the delay expires, cancel the previous timeout and restart the wait.
 - Clean up the pending timeout when the hook unmounts.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -36,11 +36,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useEffect, useRef } from "react";

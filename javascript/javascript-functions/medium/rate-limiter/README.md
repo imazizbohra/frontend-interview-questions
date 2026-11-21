@@ -20,7 +20,7 @@ Each result is:
 `true` if the task is accepted.
 `false` if the task is rejected because the sliding window already contains `maxAllowed` previously accepted tasks.
 
-## Example(s)
+## Examples
 
 ```ts
 rateLimit([1, 3, 5, 6, 8, 9, 10], 2, 5);
@@ -44,7 +44,7 @@ rateLimit([2, 2, 2], 2, 3);
 - Inputs are guaranteed valid.
 - Do not mutate the input array.
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function rateLimit(

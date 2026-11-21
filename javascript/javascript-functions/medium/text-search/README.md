@@ -6,7 +6,7 @@ Implement a simple version of browser in-page search that receives a string (as 
 
 Given a content string and a query string, implement a function `textSearch` that finds all case-insensitive matches with the query string, wrapping the matches in `<b>...</b>` tags.
 
-## Example(s)
+## Examples
 
 ```ts
 textSearch('The Quick Brown Fox Jumps Over The Lazy Dog', 'fox');
@@ -31,11 +31,11 @@ textSearch('aaaa', 'aa');
 // Wrong: '<b>aa</b><b>aa</b>'
 ```
 
-## Reference(s)
+## References
 
 - Javascript [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

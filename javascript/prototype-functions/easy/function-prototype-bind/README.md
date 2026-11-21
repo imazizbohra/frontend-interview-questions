@@ -2,7 +2,7 @@
 
 Implement your own `Function.prototype.bind` without calling the native bind method. To avoid overwriting the actual `Function.prototype.bind`, implement the function as `Function.prototype.myBind`.
 
-## Example(s)
+## Examples
 
 ```ts
 const john = {
@@ -19,7 +19,7 @@ const boundGetAge = john.getAge.myBind(john);
 console.log(boundGetAge()); // 42
 ```
 
-## Reference(s)
+## References
 
 - Operators [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - Operators [delete](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
@@ -29,7 +29,7 @@ console.log(boundGetAge()); // 42
 - Global Object [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - Function [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
-## Solution(s)
+## Solutions
 
 ```ts
 Function.prototype.myBind = function (

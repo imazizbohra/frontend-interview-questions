@@ -2,7 +2,7 @@
 
 Implement a `useBoolean` hook that manages boolean state with additional convenience utility methods.
 
-## Argument(s)
+## Arguments
 
 initialValue: boolean: Initial value of the boolean state. If not provided, it should default to false.
 
@@ -14,7 +14,7 @@ The useBoolean hook returns an object with the following properties:
 - setTrue: () => void: A function to set the boolean state to true
 - setFalse: () => void: A function to set the boolean state to false
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -30,11 +30,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState } from 'react';  

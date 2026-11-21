@@ -2,7 +2,7 @@
 
 Implement `groupBy(array, iteratee)` so it creates an object whose keys are the results of calling `iteratee` on each element of `array`. Each key stores an array of the original elements that produced that result. Do not modify the original array.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to iterate over.
 - iteratee (Function): The function used to produce a key for each element. It is invoked with one argument: (value).
@@ -11,7 +11,7 @@ Implement `groupBy(array, iteratee)` so it creates an object whose keys are the 
 
 (Object): Returns the composed aggregate object.
 
-## Example(s)
+## Examples
 
 ```ts
 groupBy([6.1, 4.2, 6.3], Math.floor);
@@ -25,11 +25,11 @@ groupBy([], (o) => o); // => {}
 groupBy([{ n: 1 }, { n: 2 }], (o) => o.m); // => { undefined: [{ n: 1 }, { n: 2 }] }
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.groupBy](https://lodash.com/docs/4.18.1#groupBy)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function groupBy<T>(

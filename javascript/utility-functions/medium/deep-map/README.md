@@ -2,7 +2,7 @@
 
 Implement a function `deepMap(value, fn)` that returns a new value containing the results of calling a provided function on every value that is not an `Array` or plain `object`, including values within nested arrays and plain objects. The function `fn` is called with a single argument: the value being mapped or transformed. For every callback invocation, `this` should be the original `root` value passed to `deepMap`.
 
-## Example(s)
+## Examples
 
 ```ts
 const double = (x) => x * 2;
@@ -20,12 +20,12 @@ deepMap(
 ); // => { foo: 2, bar: [4, 6, 8], qux: { a: 10, b: 12 } }
 ```
 
-## Reference(s)
+## References
 
 - Concept [recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
 - Lodash [_.map](https://lodash.com/docs/4.18.1#map)
 
-## Solution(s)
+## Solutions
 
 ```ts
 const isPlainObject = (value: unknown): boolean => {

@@ -10,7 +10,7 @@ Implement a `useInputControl` hook that manages a controlled input value and tra
 
 The handleX functions returned by the hook are meant to be passed to the relevant `<input>` event handlers for the hook to work as intended.
 
-## Argument(s)
+## Arguments
 
 `initialValue: string`: The initial value of the input
 
@@ -33,7 +33,7 @@ The hook returns an object with the following properties:
 - `touched` becomes `true` after blur and does not reset unless `reset()` is called.
 - `reset()` should restore the first-render value and clear both `dirty` and `touched`.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -64,11 +64,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { ChangeEvent, useState, useCallback, useRef } from "react";

@@ -12,7 +12,7 @@ This question should support:
 - Nested `suite(name, fn)` blocks.
 - Full spec names joined with `' > '`.
 
-## Example(s)
+## Examples
 
 ```ts
 const { suite, spec, check, run } = createTestRunner();
@@ -62,12 +62,12 @@ run().results;
 - Keep full result names deterministic.
 - You do not need hooks, async specs, skipped tests, or module-level globals.
 
-## Reference(s)
+## References
 
 - Jest [jestjs.io](https://jestjs.io/)
 - vitest [vitest.dev](https://vitest.dev/)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

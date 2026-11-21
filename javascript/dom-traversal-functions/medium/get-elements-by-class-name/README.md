@@ -1,6 +1,6 @@
 # getElementsByClassName
 
-`getElementsByClassName()` is a method that exists on HTML `Documents` and `Elements` to return an `HTMLCollection` of descendant elements within the `Document`/`Element` that have the specified class name(s).
+`getElementsByClassName()` is a method that exists on HTML `Documents` and `Elements` to return an `HTMLCollection` of descendant elements within the `Document`/`Element` that have the specified class names.
 
 Implement a custom `Element.getElementsByClassName()` that is similar but slightly different:
 
@@ -10,7 +10,7 @@ Implement a custom `Element.getElementsByClassName()` that is similar but slight
 
 Do not use `document.querySelectorAll()`, which would make the problem trivial. You will not be allowed to use it during real interviews.
 
-## Example(s)
+## Examples
 
 ```ts
 const doc = new DOMParser().parseFromString(
@@ -33,13 +33,13 @@ getElementsByClassName(doc.body, 'foo bar');
 - Reading classes of element with `className` property
 - Traversing descendants with `element.children`
 
-## Reference(s)
+## References
 
 - Document [getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
 - Element [getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName)
 - Element [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function getElementsByClassName(

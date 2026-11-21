@@ -34,7 +34,7 @@ This question should still preserve:
 - `get`, `getAll`, and `has` from the previous question.
 - Query-string-only construction with decoding behavior identical to the previous question.
 
-## Argument(s)
+## Arguments
 
 `query:(string)` A query string to parse. Defaults to `''`.
 
@@ -43,7 +43,7 @@ This question should still preserve:
 - Returns a new `URLSearchParamsPolyfill` instance.
 - Mutation methods do not return anything.
 
-## Example(s)
+## Examples
 
 ```ts
 const params = new URLSearchParamsPolyfill('a=1&a=2&b=3');
@@ -72,12 +72,12 @@ params.has('tag'); // false
 params.get('mode'); // 'fast'
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [decodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
 - Web API [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)
 
-## Solution(s)
+## Solutions
 
 ```ts
 const decodeQuery = (query = "") => {

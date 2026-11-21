@@ -15,7 +15,7 @@ Implement `debounce(func, wait)` so that `func` is called only after `wait` mill
 
 (Function): Returns the debounced function.
 
-## Example(s)
+## Examples
 
 ```ts
 let i = 0;
@@ -56,7 +56,7 @@ debouncedIncrement(); // i = 0
 //  increment was invoked and i is now 1.
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.debounce](https://lodash.com/docs/4.18.1#debounce)
 
@@ -67,7 +67,7 @@ debouncedIncrement(); // i = 0
 - How `this` works
 - Deferring a call without losing its receiver or argument list
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

@@ -6,7 +6,7 @@ Implement a simplified Redux store. The `createStore` function only needs to ini
 
 Subscriptions are intentionally out of scope for this question and are added in the follow-up question.
 
-## Argument(s)
+## Arguments
 
 `createStore(reducer, preloadedState?)`
 
@@ -24,7 +24,7 @@ Returns the current state stored by the reducer.
 `store.dispatch(action)`
 Passes action to the reducer, stores the returned state, and returns the same action object.
 
-## Example(s)
+## Examples
 
 ```ts
 function counterReducer(state = 0, action) {
@@ -72,7 +72,7 @@ store.getState(); // 11
 - State updates should be synchronous.
 - You do not need to support `enhancers`, `middleware`, `combineReducers`, `replaceReducer`, action validation, or nested dispatch rules.
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type Reducer<State, Action = { type: string }> = (

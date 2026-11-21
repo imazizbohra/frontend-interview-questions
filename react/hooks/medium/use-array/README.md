@@ -6,7 +6,7 @@ It is more convenient to use `useArray` than plain `useState`; with `useState`, 
 
 The hook should work generically with arrays of any type.
 
-## Argument(s)
+## Arguments
 
 defaultValue: The initial array of items
 
@@ -29,7 +29,7 @@ The hook returns an object with the following properties:
 - set should behave like the setter returned by useState, including accepting updater functions.
 - clear() should replace the array with an empty array.
 
-## Example(s)
+## Examples
 
 ```tsx
 const defaultValue = ['apple', 'banana'];
@@ -56,11 +56,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { Dispatch, SetStateAction, useState } from "react";

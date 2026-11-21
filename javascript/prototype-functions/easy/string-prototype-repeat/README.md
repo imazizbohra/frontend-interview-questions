@@ -13,7 +13,7 @@ This question uses an interview-sized contract instead of full spec parity:
 - Non-null and non-undefined receivers should be coerced with String(...).
 Positive fractional counts are truncated toward zero.
 
-## Example(s)
+## Examples
 
 ```ts
 'ab'.myRepeat(3); // 'ababab'
@@ -52,11 +52,11 @@ String.prototype.myRepeat.call(null, 2); // TypeError
 - Symbol receivers are out of scope.
 - Full coercion of arbitrary non-number count inputs is out of scope.
 
-## Reference(s)
+## References
 
 - String [repeat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)
 
-## Solution(s)
+## Solutions
 
 ```ts
 String.prototype.myRepeat = function (this: unknown, count?: number) {

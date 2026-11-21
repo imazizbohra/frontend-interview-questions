@@ -4,7 +4,7 @@ The `intersectionWith` function takes a custom `comparator` function and multipl
 
 Implement `intersectionWith(comparator, ...arrays)` so it returns the matching values from the first array in the same order they appear there. If no arrays are provided, or any array is empty, return [].
 
-## Argument(s)
+## Arguments
 
 - comparator (Function): The function used to compare two elements. It is invoked with (arrVal, othVal) and should return true when the values should be treated as equal.
 - arrays (...Array): The arrays to inspect.
@@ -13,7 +13,7 @@ Implement `intersectionWith(comparator, ...arrays)` so it returns the matching v
 
 (Array): Returns the intersecting values from the first array.
 
-## Example(s)
+## Examples
 
 ```ts
 const arr1 = [
@@ -42,11 +42,11 @@ intersectionWith((a, b) => a === b, [1, 2, 3], [2, 3, 4], [3, 4, 5]);
 - If no arrays are provided, the function will return an empty array.
 - If any of the arrays are empty, the function will return an empty array.
 
-## Reference(s)
+## References
 
 - Lodash [_.intersintersectionWithectionBy](https://lodash.com/docs/4.18.1#intersectionWith)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function intersectionWith<T>(

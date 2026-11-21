@@ -4,7 +4,7 @@ When fetching data or performing other async operations, it is sometimes useful 
 
 Implement a `promiseTimeout` function that accepts a promise and a timeout duration (in milliseconds) and returns a `Promise`. If the promise argument settles within the timeout period, the returned promise settles with the promise argument's fulfillment value or rejection reason. Otherwise, the returned promise rejects with the string "Promise timeout".
 
-## Example(s)
+## Examples
 
 ```ts
 function fakeFetch(latency) {
@@ -29,12 +29,12 @@ await promiseTimeout(fakeFetch(5000), 2000);
 - If the original promise rejects before the timeout, the returned promise should reject with that original reason.
 - A duration of 0 still schedules a timer; do not reject synchronously.
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

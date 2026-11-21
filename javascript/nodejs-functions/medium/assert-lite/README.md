@@ -11,7 +11,7 @@ This first question is intentionally limited:
 - Failing assertions should throw `AssertionError`.
 - `strictEqual()` should use `Object.is()` semantics.
 
-## Example(s)
+## Examples
 
 ```ts
 ok('hello');
@@ -46,11 +46,11 @@ ok('', 'Name is required');
 - You do not need diff formatting, loose equality assertions, negated assertions, or stack trace customization.
 - Tests in this question only use ordinary interview values; you do not need to optimize for every edge case of the real Node.js module.
 
-## Reference(s)
+## References
 
 - NodeJs [assert](https://nodejs.org/api/assert.html)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type AssertionErrorOptions = {

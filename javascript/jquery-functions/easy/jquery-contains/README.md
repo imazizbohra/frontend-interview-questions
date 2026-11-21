@@ -6,7 +6,7 @@ Implement a jQuery object with a `contains(container, contained)` method that re
 
 Unlike `Node.contains()`, this jQuery helper is self-exclusive, which means an element does not contain itself.
 
-## Argument(s)
+## Arguments
 
 `jQuery.contains(container, contained)`
 
@@ -17,7 +17,7 @@ Unlike `Node.contains()`, this jQuery helper is self-exclusive, which means an e
 
 Returns true if contained is an element descendant of container, and false otherwise.
 
-## Example(s)
+## Examples
 
 ```ts
 const doc = new DOMParser().parseFromString(
@@ -44,7 +44,7 @@ jQuery.contains(parent, parent); // false
 - Return false for the same element, ancestors, siblings, unrelated nodes, and disconnected trees.
 - Do not use Node.contains() or compareDocumentPosition().
 
-## Reference(s)
+## References
 
 - jQuery [contains](https://api.jquery.com/jQuery.contains/)
 
@@ -53,7 +53,7 @@ jQuery.contains(parent, parent); // false
 - DOM tree traversal.
 - Parent-pointer walking.
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1: bottom-up

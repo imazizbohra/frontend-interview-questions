@@ -4,7 +4,7 @@ Implement a function `findLastIndex(array, predicate, [fromIndex=array.length-1]
 
 The function returns the index of the first element that satisfies the predicate when iterating backwards from fromIndex.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to inspect.
 - predicate (Function): The function invoked per iteration.
@@ -20,7 +20,7 @@ Predicate signature: The predicate function is invoked with three arguments: (va
 
 (number): Returns the index of the found element, or -1 otherwise.
 
-## Example(s)
+## Examples
 
 ```ts
 const arr = [5, 4, 3, 2, 1]; // Indices: 0, 1, 2, 3, 4
@@ -70,11 +70,11 @@ findLastIndex(arr, (num) => num > 0, 10); // => 4
 findLastIndex(arr, (num) => num > 0, -10); // => 0
 ```
 
-## Reference(s)
+## References
 
 Lodash [_.findLastIndex](https://lodash.com/docs/4.18.1#findLastIndex)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function findLastIndex<T>(

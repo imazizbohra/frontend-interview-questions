@@ -4,7 +4,7 @@
 
 Implement `Array.prototype.at`. To avoid overwriting the actual `Array.prototype.at`, implement it as `Array.prototype.myAt`.
 
-## Example(s)
+## Examples
 
 ```ts
 const arr = [42, 79];
@@ -21,11 +21,11 @@ arr.myAt(-3); // undefined
 
 There are some tricky cases to handle. Read the specification for Array.prototype.at on MDN Docs before attempting.
 
-## Reference(s)
+## References
 
 - Array [at](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
 
-## Solution(s)
+## Solutions
 
 ```ts
 Array.prototype.myAt = function (index: number) {

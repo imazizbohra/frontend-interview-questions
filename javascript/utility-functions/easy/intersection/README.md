@@ -4,7 +4,7 @@ Implement `intersection(...arrays)` so it returns a new array containing the uni
 
 If no arrays are provided, return an empty array.
 
-## Argument(s)
+## Arguments
 
 arrays (...Array): The arrays to compare.
 
@@ -12,7 +12,7 @@ arrays (...Array): The arrays to compare.
 
 (Array): Returns a new array containing the unique values present in all given arrays.
 
-## Example(s)
+## Examples
 
 ```ts
 const arr1 = [1, 2, 3];
@@ -27,7 +27,7 @@ intersection(arr4); // => [1, 5, 7, 9]
 intersection(); // => []
 ```
 
-## Reference(s)
+## References
 
 - Array [from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 - Array [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
@@ -37,7 +37,7 @@ intersection(); // => []
 - Javascript [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)
 - Lodash [_.intersection](https://lodash.com/docs/4.18.1#intersection)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function intersection<T>(...arrays: Array<Array<T>>): Array<T> {

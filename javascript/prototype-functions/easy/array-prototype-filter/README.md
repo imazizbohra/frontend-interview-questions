@@ -6,7 +6,7 @@ For sparse arrays (e.g. [1, 2, , 4]), the empty values should be ignored while t
 
 Implement `Array.prototype.filter`. To avoid overwriting the actual `Array.prototype.filter`, which is being used by the autograder, implement it as `Array.prototype.myFilter`.
 
-## Example(s)
+## Examples
 
 ```ts
 [1, 2, 3, 4].myFilter((value) => value % 2 == 0); // [2, 4]
@@ -17,11 +17,11 @@ Implement `Array.prototype.filter`. To avoid overwriting the actual `Array.proto
 
 The filter callback function receives more than just the element. `Array.prototype.filter` also accepts a second parameter. Read the specification for `Array.prototype.filter` on MDN Docs before attempting.
 
-## Reference(s)
+## References
 
 - Array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
-## Solution(s)
+## Solutions
 
 ```ts
 Array.prototype.myFilter = function (callbackFn, thisArg) {

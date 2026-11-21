@@ -2,7 +2,7 @@
 
 Implement a function `findIndex(array, predicate, [fromIndex=0])` that takes an array of values, a function predicate, and an optional fromIndex number argument, and returns the index of the first element in the array that satisfies the provided testing function predicate.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to inspect.
 - predicate (Function): The function invoked per iteration.
@@ -18,7 +18,7 @@ Predicate signature: The predicate function is invoked with three arguments: (va
 
 (number): Returns the index of the found element, or -1 otherwise.
 
-## Example(s)
+## Examples
 
 ```ts
 const arr = [1, 2, 3, 4, 5];
@@ -56,11 +56,11 @@ findIndex(arr, (num) => num > 2, -10); // => 2
 findIndex(arr, (num) => num > 2, 10); // => -1
 ```
 
-## Reference(s)
+## References
 
 Lodash [_.findIndex](https://lodash.com/docs/4.18.1#findIndex)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function findIndex<T>(

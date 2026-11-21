@@ -8,7 +8,7 @@ Implement a function `deepEqual` that performs a deep comparison between two val
 
 **Note**: Similar to [deep clone](../deep-clone-2/)
 
-## Example(s)
+## Examples
 
 ```ts
 deepEqual('foo', 'foo'); // true
@@ -26,12 +26,12 @@ deepEqual([{ id: '1' }], [{ id: '2' }]); // false
 - Non-enumerable properties and symbol-keyed properties are not compared.
 - Prototypes are not compared. Two plain-object-shaped values with different prototypes can still compare equal if their enumerable entries match.
 
-## Reference(s)
+## References
 
 - Concept [deep-equal](https://developer.mozilla.org/en-US/docs/Glossary/Deep_equality)
 - Lodash [_.isEqual](https://lodash.com/docs/4.18.1#isEqual)
 
-## Solution(s)
+## Solutions
 
 ```ts
 function isPlainObject(value: unknown): boolean {

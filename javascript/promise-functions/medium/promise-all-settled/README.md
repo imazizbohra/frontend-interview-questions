@@ -6,7 +6,7 @@
 
 Implement a custom version of `Promise.allSettled()`, a `promiseAllSettled` function, except that the function takes an array instead of an iterable. Be sure to read the description carefully and implement accordingly!
 
-## Example(s)
+## Examples
 
 ```ts
 const p0 = Promise.resolve(3);
@@ -25,13 +25,13 @@ await promiseAllSettled([p0, p1, p2]);
 // ];
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - Promise [allSettled](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
 
-## Solution(s)
+## Solutions
 
 ```ts
 interface PromiseFulfilledResult<T> {

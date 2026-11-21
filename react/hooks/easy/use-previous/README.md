@@ -2,7 +2,7 @@
 
 Implement a `usePrevious` hook that returns the previous distinct state value. Unrelated re-renders with the same state value should not advance the previous value.
 
-## Argument(s)
+## Arguments
 
 state: The state to track. This should be a generic value of any type
 
@@ -10,7 +10,7 @@ state: The state to track. This should be a generic value of any type
 
 The `usePrevious` hook should return the previous distinct value of the state argument, or undefined before the first change.
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -28,13 +28,13 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 - React [useEffect](https://react.dev/reference/react/useEffect)
 - React [useRef](https://react.dev/reference/react/useRef)
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

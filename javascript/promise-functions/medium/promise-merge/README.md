@@ -13,7 +13,7 @@ The returned promise should reject if one of the following happens:
 - The types of the fulfilled results do not match; reject with the string 'Unsupported data types'.
 - One of the promises fails; reject with the rejected promise's reason.
 
-## Example(s)
+## Examples
 
 ```ts
 await promiseMerge(Promise.resolve(1), Promise.resolve(2)); // 3
@@ -25,7 +25,7 @@ await promiseMerge(Promise.resolve(1), Promise.resolve([])); // Rejected with 'U
 await promiseMerge(Promise.reject(1), Promise.resolve(2)); // Rejected with 1
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
@@ -35,7 +35,7 @@ await promiseMerge(Promise.reject(1), Promise.resolve(2)); // Rejected with 1
 - Determine the type of value
 - Determine if an object is POJO
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

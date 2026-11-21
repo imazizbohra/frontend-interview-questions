@@ -6,7 +6,7 @@ Sometimes UI behavior is controlled by hiding a container instead of hiding each
 
 Implement `lowestHidingElement(elements)`, which takes a non-empty array of DOM elements and returns the deepest element that would hide all of them if that element were hidden.
 
-## Argument(s)
+## Arguments
 
 `lowestHidingElement(elements)`
 
@@ -24,7 +24,7 @@ Returns the deepest `Element` that contains every element in `elements`.
 - Do not worry about Shadow DOM, iframes, detached trees, or existing CSS visibility state.
 “Hidden” is only the motivation for the problem. The task is to find the shared deepest containing element.
 
-## Example(s)
+## Examples
 
 ```ts
 const page = new DOMParser().parseFromString(
@@ -72,13 +72,13 @@ lowestHidingElement([list, firstLink]);
 // list
 ```
 
-## Reference(s)
+## References
 
 - Array [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 - Node [parentElement](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement)
 - Node [contains](https://developer.mozilla.org/en-US/docs/Web/API/Node/contains)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

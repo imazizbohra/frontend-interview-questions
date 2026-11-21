@@ -2,7 +2,7 @@
 
 Given a predicate function and an array, implement a function `dropWhile(array, predicate)`. This function should create a slice of array excluding elements dropped from the start of the list. Elements are dropped until predicate returns falsy. Your function should not modify the original array. The array may or may not be in sorted order.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to query.
 - predicate (Function): The function invoked per iteration.
@@ -17,7 +17,7 @@ Predicate signature: The predicate function is invoked with three arguments: (va
 
 (Array): Returns the slice of array containing the kept elements.
 
-## Example(s)
+## Examples
 
 ```ts
 dropWhile([1, 2, 3, 4, 5], (value, _index, _array) => value < 3);
@@ -49,12 +49,12 @@ dropWhile([4, 5, 12, 10, 11], (value, _index, array) => value < array[2]);
 - The input array does not need to be sorted because the scan is strictly left to right until the first falsy result.
 - Sparse arrays work through normal JavaScript indexing: a hole reads as undefined when visited, and slice() preserves holes in the returned suffix.
 
-## Reference(s)
+## References
 
 - Array [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 - Lodash [_.dropWhile](https://lodash.com/docs/4.18.1#dropWhile)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function dropWhile<T>(

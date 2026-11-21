@@ -15,7 +15,7 @@ Additionally, the debounced function comes with two extra methods:
 - `cancel()` method to cancel pending invocations.
 - `flush()` method to immediately invoke any delayed invocations.
 
-## Example(s)
+## Examples
 
 ```ts
 let i = 0;
@@ -53,7 +53,7 @@ debouncedIncrement.flush(); // i is now 1 because flush() causes the callback to
 // and won't be called again.
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.debounce](https://lodash.com/docs/4.18.1#debounce)
 
@@ -64,7 +64,7 @@ debouncedIncrement.flush(); // i is now 1 because flush() causes the callback to
 - How `this` works
 - Deferring a call without losing its receiver or argument list
 
-## Solution(s)
+## Solutions
 
 ```ts
 interface DebouncedFunction extends Function {

@@ -4,7 +4,7 @@ Implement `size(collection)` so it returns the number of items in a supported co
 
 Arrays and strings use length, plain objects use the number of own enumerable properties, and Map and Set use size. Return 0 for null, undefined, or unsupported values.
 
-## Argument(s)
+## Arguments
 
 collection (Array | Object | string | Map | Set | null | undefined): The collection to inspect.
 
@@ -12,7 +12,7 @@ collection (Array | Object | string | Map | Set | null | undefined): The collect
 
 (number): Returns the collection size.
 
-## Example(s)
+## Examples
 
 ```ts
 // Arrays.
@@ -38,11 +38,11 @@ size(null); // => 0
 
 Your function should handle null, undefined, and unsupported inputs by returning 0.
 
-## Reference(s)
+## References
 
 - Lodash [_.size](https://lodash.com/docs/4.18.1#size)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function size(

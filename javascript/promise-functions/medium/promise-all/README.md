@@ -15,7 +15,7 @@ Implement your own version of Promise.all, called `promiseAll`, except that the 
 - Treat non-promise values as fulfilled values in their original positions.
 - Settling the returned promise does not cancel any remaining input promises.
 
-## Example(s)
+## Examples
 
 ```ts
 // Resolved example.
@@ -46,12 +46,12 @@ try {
 }
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type ReturnValue<T> = { -readonly [P in keyof T]: Awaited<T[P]> };

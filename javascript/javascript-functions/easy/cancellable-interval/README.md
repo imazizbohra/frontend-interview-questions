@@ -2,7 +2,7 @@
 
 Implement a function `setCancellableInterval` that acts like `setInterval` but, instead of returning a timer ID, returns a function that cancels the interval when called. The `setCancellableInterval` function should have the same signature as `setInterval`:
 
-## Example(s)
+## Examples
 
 ```ts
 let i = 0;
@@ -16,11 +16,11 @@ cancel(); // Called at t = 25
 // t = 30: i is still 2 because cancel() was called and the interval callback has stopped running.
 ```
 
-## Reference(s)
+## References
 
 Window [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function setCancellableInterval(

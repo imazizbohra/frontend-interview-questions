@@ -4,7 +4,7 @@ Implement a function `fill(array, value, [start=0], [end=array.length])` that fi
 
 Note: This method mutates array.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to fill.
 - value (*): The value to fill array with.
@@ -15,7 +15,7 @@ Note: This method mutates array.
 
 (Array): Returns array.
 
-## Example(s)
+## Examples
 
 ```ts
 fill([1, 2, 3], 'a'); // ['a', 'a', 'a']
@@ -40,11 +40,11 @@ Make sure to handle negative indices and out-of-bounds indices as detailed in th
 - If a translated index is < 0, clamp it to 0.
 - If a translated index is > array.length, clamp it to array.length.
 
-## Reference(s)
+## References
 
 Lodash [_.fill](https://lodash.com/docs/4.18.1#fill)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function fill<T>(

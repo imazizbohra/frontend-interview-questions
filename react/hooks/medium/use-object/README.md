@@ -6,7 +6,7 @@ When the state setter is called with an object, it is merged with the existing o
 
 It is more convenient to use `useObject` instead of plain `useState` because with `useState`, you would always have to create a new object, mutate it, then set state to use the new object (or create a new object via object spread), which can be quite cumbersome.
 
-## Argument(s)
+## Arguments
 
 `initialValue`: The initial value of the object
 
@@ -28,7 +28,7 @@ The updater function can receive either:
 - The updater-function form should derive its patch from the latest previous state.
 - Only plain object patches are valid. If a direct patch or the value returned by an updater is an array, null, Date, or another non-plain object, throw an error with the message `Invalid new state`.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -49,11 +49,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState } from "react";

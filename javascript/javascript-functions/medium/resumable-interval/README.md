@@ -10,7 +10,7 @@ Implement a function `createResumableInterval` that acts like `setInterval` and 
 
 A newly created interval starts paused. Calling `start()` while it is already running should do nothing: it must not invoke the callback again or create another timer.
 
-## Example(s)
+## Examples
 
 ```ts
 let i = 0;
@@ -40,11 +40,11 @@ interval.stop(); // i remains at 4.
 - Extra arguments passed to `createResumableInterval(callback, delay, ...args)` are forwarded to the immediate callback invocation and to `setInterval()`.
 - this does not need special handling within the callback function because there is no option to pass a `thisArg` to `setInterval`, unlike `Array.prototype.forEach()` or `Array.prototype.reduce()`. Read more about this on MDN.
 
-## Reference(s)
+## References
 
 Window [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1 

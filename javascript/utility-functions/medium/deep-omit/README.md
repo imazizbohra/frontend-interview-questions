@@ -10,7 +10,7 @@ Behavior guide
 - Leave non-plain objects such as `Date`, `RegExp`, `Map`, and `Set` as-is.
 - Ignore keys that do not exist.
 
-## Example(s)
+## Examples
 
 ```ts
 deepOmit({ a: 1, b: 2, c: 3 }, ['b']); // { a: 1, c: 3 }
@@ -31,11 +31,11 @@ const obj = {
 deepOmit(obj, ['b', 'c', 'e']); // { a: 1, f: [5, 6] }
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.omit](https://lodash.com/docs/4.18.1#omit)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function deepOmit(val: unknown, keys: Array<string>): unknown {

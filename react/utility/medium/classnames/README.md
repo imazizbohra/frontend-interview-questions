@@ -4,7 +4,7 @@
 
 Implement the `classnames` function.
 
-## Example(s)
+## Examples
 
 ```ts
 classNames('foo', 'bar'); // 'foo bar'
@@ -33,12 +33,12 @@ classNames(
 classNames(null, false, 'bar', undefined, { baz: null }, ''); // 'bar'
 ```
 
-## Reference(s)
+## References
 
 - Github [classnames](https://github.com/JedWatson/classnames)
 - Github [clsx](https://github.com/lukeed/clsx)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type ClassValue =

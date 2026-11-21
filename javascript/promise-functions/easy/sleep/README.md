@@ -2,7 +2,7 @@
 
 In languages like Java and Python, a `sleep` function is available to suspend execution of the calling thread. However, unlike those languages, JavaScript is single-threaded, and blocking the main thread is not a good idea. Therefore, let's implement an asynchronous version of the `sleep` function that works similarly but does not block the main thread.
 
-## Argument(s)
+## Arguments
 
 duration (number): Duration to sleep for.
 
@@ -10,7 +10,7 @@ duration (number): Duration to sleep for.
 
 (number): Returns an empty promise.
 
-## Example(s)
+## Examples
 
 ```ts
 async function greeting() {
@@ -31,12 +31,12 @@ sleep(2000).then(() => {
 });
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default async function sleep(duration: number): Promise<void> {

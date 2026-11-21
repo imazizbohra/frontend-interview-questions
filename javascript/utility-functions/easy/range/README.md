@@ -4,7 +4,7 @@ Implement a function `range([start=0], end, [step=1])` that creates an array of 
 
 When step is 0, return Math.max(Math.ceil(end - start), 0) copies of start. This repeats start when start < end and returns [] when start >= end. An explicit zero step does not switch to a descending step.
 
-## Argument(s)
+## Arguments
 
 - start (Number): The start of the range.
 - end (Number): The end of the range.
@@ -14,7 +14,7 @@ When step is 0, return Math.max(Math.ceil(end - start), 0) copies of start. This
 
 (Array): Returns the range of numbers.
 
-## Example(s)
+## Examples
 
 ```ts
 range(4); // => [0, 1, 2, 3]
@@ -33,11 +33,11 @@ The function should return an empty array if start is equal to end.
 range(0); // => []
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.range](https://lodash.com/docs/4.18.1#range)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function range(

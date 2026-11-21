@@ -4,7 +4,7 @@ This is a follow-up to [Throttle](../throttle/). The original function invokes i
 
 Implement `throttle(func, wait, options)`.
 
-## Example(s)
+## Examples
 
 ```ts
 const throttled = throttle(saveDraft, 1000, {
@@ -19,7 +19,7 @@ throttled('latest'); // Replaces the pending trailing arguments.
 // After 1000ms, invokes saveDraft('latest').
 ```
 
-## Argument(s)
+## Arguments
 
 | Argument | Type | Description |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ The throttled function returns the result of the most recent invocation, or `und
 - `cancel()` is idempotent.
 - Assume `wait` is non-negative. Asynchronous callback settlement and promise cancellation are outside the scope of this question.
 
-## Reference(s)
+## References
 
 - Lodash [_.throttle](https://lodash.com/docs/4.18.1#throttle)
 
@@ -61,7 +61,7 @@ The throttled function returns the result of the most recent invocation, or `und
 - How `this` works
 - Deferring a call without losing its receiver or argument list
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type ThrottleOptions = {

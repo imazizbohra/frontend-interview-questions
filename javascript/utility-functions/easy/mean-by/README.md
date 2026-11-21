@@ -2,7 +2,7 @@
 
 Implement a function `meanBy(array, iteratee)` that calculates the mean of the values produced by iteratee for the elements in array.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to iterate over.
 - iteratee (Function): The iteratee invoked per element, which accepts one argument: (value).
@@ -11,7 +11,7 @@ Implement a function `meanBy(array, iteratee)` that calculates the mean of the v
 
 (Number): Returns the mean value.
 
-## Example(s)
+## Examples
 
 ```ts
 meanBy([{ n: 1 }, { n: 3 }], (o) => o.n); // => 2
@@ -29,11 +29,11 @@ meanBy([{ n: 1 }, { n: 2 }], (o) => o.m); // => NaN
 meanBy([{ n: 1 }, { m: 2 }], (o) => o.m); // => 2
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.meanBy](https://lodash.com/docs/4.18.1#meanBy)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function meanBy<T>(

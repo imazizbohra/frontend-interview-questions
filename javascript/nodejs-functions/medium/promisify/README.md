@@ -6,7 +6,7 @@ Implement a function promisify that takes a function following the common callba
 
 When invoking the original function, the returned function should preserve its call-time `this` value, forward all supplied arguments, and append the callback as the final argument.
 
-## Example(s)
+## Examples
 
 ```ts
 // Example function with callback as last argument
@@ -21,13 +21,13 @@ const promisifiedFoo = promisify(foo);
 const data = await promisifiedFoo('example.com', { foo: 1 });
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - NodeJs [util.promisify(original)](https://nodejs.org/api/util.html#utilpromisifyoriginal)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function promisify<T>(

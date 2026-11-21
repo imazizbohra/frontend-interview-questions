@@ -9,7 +9,7 @@ Implement `isEmpty(value)` so it returns true when value has no items to inspect
 
 You do not need to handle DOM or jQuery-like collections.
 
-## Argument(s)
+## Arguments
 
 value (*): The value to check.
 
@@ -17,7 +17,7 @@ value (*): The value to check.
 
 (boolean): Returns true if value is empty, else false.
 
-## Example(s)
+## Examples
 
 ```ts
 isEmpty(null); // => true
@@ -28,11 +28,11 @@ isEmpty([1, 2, 3]); // => false
 isEmpty({ a: 1 }); // => false
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.isEmpty](https://lodash.com/docs/4.18.1#isEmpty)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

@@ -4,7 +4,7 @@ Implement a function `objectMap(obj, fn)` to return a new object containing the 
 
 Map only the input object's own enumerable properties, keep the same property names, and do not recurse into nested values. Invoke `fn` with the original input object as its this value, and leave the input object unchanged.
 
-## Argument(s)
+## Arguments
 
 - object (object): Object that is being mapped and transformed.
 - function (Function): Transformation function
@@ -13,20 +13,20 @@ Map only the input object's own enumerable properties, keep the same property na
 
 (object): Returns new object with the same keys and transformed values.
 
-## Example(s)
+## Examples
 
 ```ts
 const double = (x) => x * 2;
 objectMap({ foo: 1, bar: 2 }, double); // => { foo: 2, bar: 4}
 ```
 
-## Reference(s)
+## References
 
 - Object [hasOwn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
 - Function [call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 - Lodash [_.mapValues](https://lodash.com/docs/4.18.1#mapValues)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function objectMap<V, R>(

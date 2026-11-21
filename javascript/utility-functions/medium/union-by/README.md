@@ -2,7 +2,7 @@
 
 Implement a function `unionBy(iteratee, ...arrays)` that creates an array of unique values, in order, from all given arrays and accepts an `iteratee`, which is invoked for each element of each array to generate the criterion by which uniqueness is computed.
 
-## Argument(s)
+## Arguments
 
 - iteratee (Function): The iteratee invoked per element. The function is invoked with one argument: value.
 - [arrays] (...Array): The arrays to inspect.
@@ -11,7 +11,7 @@ Implement a function `unionBy(iteratee, ...arrays)` that creates an array of uni
 
 - (Array): Returns the new array of combined values.
 
-## Example(s)
+## Examples
 
 ```ts
 unionBy((value: any) => value, [2], [1, 2]); // => [2, 1]
@@ -27,11 +27,11 @@ unionBy((o) => o.m, []); // => []
 unionBy((o) => o.m, [{ n: 1 }], [{ m: 2 }]); // => [{ n: 1 }, { m: 2 }]
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.unionBy](https://lodash.com/docs/4.18.1#unionBy)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

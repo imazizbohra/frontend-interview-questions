@@ -27,7 +27,7 @@ Implement `mergeData`, a function that returns a unified view of each user's act
 
 The order of the results should always remain unchanged from the original set, and in the case of merging sessions with the same user, the row should take the place of the earliest occurrence of that `user`. The input objects should not be modified.
 
-## Example(s)
+## Examples
 
 The following example uses the data set above:
 
@@ -56,12 +56,12 @@ const containsFourMulFive = containsFour(5);
 containsFourMulFive(6); // 120
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - JavaScript [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

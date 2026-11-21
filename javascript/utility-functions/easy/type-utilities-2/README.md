@@ -15,7 +15,7 @@ The [Type Utilities](../type-utilities/) question covered utility functions for 
 - Familiarity with JavaScript types.
 - Objects and prototypes.
 
-## Solution(s)
+## Solutions
 
 ```ts
 export function isArray(value: unknown): boolean {

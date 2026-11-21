@@ -6,7 +6,7 @@ Implement a reusable `CircularBuffer` class with that behavior.
 
 This API is inspired by [cirbuf](https://github.com/jamiebuilds/cirbuf), but for this question you only need a minimal fixed-size buffer that supports appending values and reading them back in logical order.
 
-## Example(s)
+## Examples
 
 ```ts
 const buffer = new CircularBuffer(3);
@@ -44,11 +44,11 @@ buffer.push({ id: 3 });
 buffer.toArray(); // [{ id: 2 }, { id: 3 }]
 ```
 
-## Reference(s)
+## References
 
 - Github [cirbuf](https://github.com/jamiebuilds/cirbuf)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

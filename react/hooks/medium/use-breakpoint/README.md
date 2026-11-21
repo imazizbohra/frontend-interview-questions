@@ -2,7 +2,7 @@
 
 Implement a `createBreakpoint` function that takes an object whose keys are breakpoint names and whose values are minimum widths, then returns a `useBreakpoint` hook that reports the current breakpoint name based on `window.innerWidth`.
 
-## Argument(s)
+## Arguments
 
 The `createBreakpoint` function takes an object of key-value pairs where each key is a breakpoint name (string) and each value is the breakpoint's minimum width (number) in pixels.
 
@@ -17,7 +17,7 @@ The `createBreakpoint` function returns the actual `useBreakpoint` hook. This ho
 - Listen for `resize` events and clean up the listener when the hook unmounts.
 - The breakpoint map is guaranteed to be non-empty.
 
-## Example(s)
+## Examples
 
 ```tsx
 const useBreakpoint = createBreakpoint({
@@ -39,11 +39,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

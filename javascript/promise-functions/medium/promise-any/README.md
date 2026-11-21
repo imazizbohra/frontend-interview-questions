@@ -9,7 +9,7 @@ Implement a custom version of `Promise.any()`, a `promiseAny` function, except t
 
 Be sure to read the description carefully and implement accordingly!
 
-## Example(s)
+## Examples
 
 ```ts
 const p0 = Promise.resolve(42);
@@ -57,7 +57,7 @@ try {
 }
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
@@ -70,7 +70,7 @@ try {
 - Concurrent async coordination
 - Preserving input order for aggregated errors
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function promiseAny<T>(iterable: Array<T>): Promise<T> {

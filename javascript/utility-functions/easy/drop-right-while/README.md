@@ -2,7 +2,7 @@
 
 Given a predicate function and an array, implement a function `dropRightWhile(array, predicate)`. This function should create a slice of array excluding elements dropped from the end. Elements are dropped until predicate returns falsy. Your function should not modify the original array. The array may or may not be in sorted order.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to query.
 - predicate (Function): The function invoked per iteration.
@@ -17,7 +17,7 @@ Predicate signature: The predicate function is invoked with three arguments: (va
 
 (Array): Returns the slice of array containing the kept elements.
 
-## Example(s)
+## Examples
 
 ```ts
 // Example 1: Basic usage
@@ -53,12 +53,12 @@ dropRightWhile([10, 11, 12, 4, 5], (value, _index, array) => value < array[1]);
 - The input array is never modified; slice() creates the returned array.
 - This is a suffix operation. If matching values appear earlier in the kept prefix, they remain in the output.
 
-## Reference(s)
+## References
 
 - Array [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 - Lodash [_.dropRightWhile](https://lodash.com/docs/4.18.1#dropRightWhile)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function dropRightWhile<T>(

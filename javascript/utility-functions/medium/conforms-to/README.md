@@ -2,7 +2,7 @@
 
 Implement a function `conformsTo(object, source)` that checks whether `object` conforms to `source` by invoking the predicate properties of `source` with the corresponding property values of `object`.
 
-## Argument(s)
+## Arguments
 
 - `object (Object)`: The object to inspect.
 - `source (Object)`: The object of property predicates to conform to.
@@ -11,7 +11,7 @@ Implement a function `conformsTo(object, source)` that checks whether `object` c
 
 `(boolean)`: Returns true if object conforms; otherwise, returns false.
 
-## Example(s)
+## Examples
 
 ```ts
 conformsTo({ a: 1, b: 2 }, { b: (n) => n > 1 });
@@ -27,11 +27,11 @@ The function should return false when object is empty.
 conformsTo({}, { b: (n) => n > 1 }); // => false
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.conformsTo](https://lodash.com/docs/4.18.1#conformsTo)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function conformsTo<T>(

@@ -2,7 +2,7 @@
 
 Implement a custom version of `Promise.race()`, a `promiseRace` function, except that the function takes an array instead of an iterable. Be sure to read the description carefully and implement accordingly!
 
-## Example(s)
+## Examples
 
 ```ts
 const p0 = new Promise((resolve) => {
@@ -49,13 +49,13 @@ try {
 }
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - Promise [race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function promiseRace<T extends readonly unknown[] | []>(

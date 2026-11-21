@@ -2,7 +2,7 @@
 
 Implement a function `inRange(value, [start=0], end)` to check if a number value is greater than or equal to start and less than end. If only two arguments are specified, the second argument becomes end and start is set to 0. If start is greater than end, the parameters are swapped to support reversed ranges.
 
-## Argument(s)
+## Arguments
 
 - value (number): The number to check.
 - [start=0] (number): The start of the range.
@@ -12,7 +12,7 @@ Implement a function `inRange(value, [start=0], end)` to check if a number value
 
 (boolean): Returns true if value is in the range, or false otherwise.
 
-## Example(s)
+## Examples
 
 ```ts
 inRange(3, 2, 4); // => true
@@ -24,11 +24,11 @@ inRange(5.2, 4); // => false
 inRange(-3, -2, -6); // => true
 ```
 
-## Reference(s)
+## References
 
 - Lodash [_.inRange](https://lodash.com/docs/4.18.1#inRange)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function inRange(

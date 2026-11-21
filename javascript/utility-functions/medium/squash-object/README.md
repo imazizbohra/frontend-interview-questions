@@ -2,7 +2,7 @@
 
 Implement a function that returns a new object with the input object squashed to a single level, where nested keys are joined with a period delimiter `(.)`.
 
-## Example(s)
+## Examples
 
 ```ts
 const object = {
@@ -47,7 +47,7 @@ const object = {
 squashObject(object); // { foo: 1, 'foo.bar': 2 }
 ```
 
-## Reference(s)
+## References
 
 - Concept [Recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
 
@@ -55,7 +55,7 @@ squashObject(object); // { foo: 1, 'foo.bar': 2 }
 
 - Convert array to Object `{ ...array }`
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1: Recursion

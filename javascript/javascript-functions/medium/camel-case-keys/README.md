@@ -4,7 +4,7 @@ Implement a function `camelCaseKeys` that takes an object and returns a new obje
 
 Camel case is a format where word boundaries are represented by capitalizing each word after the first, and the first letter is lowercase. Some examples:
 
-## Example(s)
+## Examples
 
 ```ts
 camelCaseKeys({ foo_bar: true });
@@ -17,11 +17,11 @@ camelCaseKeys([{ baz_qux: true }, { foo: true, bar: [{ foo_bar: 'hello' }] }]);
 // [{ bazQux: true }, { foo: true, bar: [{ fooBar: 'hello' }] }]
 ```
 
-## Reference(s)
+## References
 
 - Github [camelcase-keys](https://github.com/sindresorhus/camelcase-keys)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

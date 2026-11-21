@@ -2,7 +2,7 @@
 
 Implement a sum function that accepts a number and can be called repeatedly with more numbers. Calling the function without an argument will sum up all the arguments so far and return the total.
 
-## Example(s)
+## Examples
 
 ```ts
 sum(1)(); // 1
@@ -12,7 +12,7 @@ sum(1)(2)(-3)(); // 0
 
 A partially applied chain can be reused. Extending one branch should not change the result of another branch created from the same earlier call.
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

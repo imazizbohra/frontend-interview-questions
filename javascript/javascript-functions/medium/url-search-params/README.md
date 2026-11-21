@@ -14,7 +14,7 @@ This question should support:
 - Percent-decoding.
 - `+` being treated as a space while parsing.
 
-## Argument(s)
+## Arguments
 
 `query:(string)` A query string to parse. Defaults to `''`.
 
@@ -22,7 +22,7 @@ This question should support:
 
 Returns a new `URLSearchParamsPolyfill` instance.
 
-## Example(s)
+## Examples
 
 ```ts
 const params = new URLSearchParamsPolyfill('?a=1&a=2&debug');
@@ -51,12 +51,12 @@ params.get('tag'); // 'js'
 params.getAll('tag'); // ['js', 'ts']
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [decodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
 - Web API [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default class URLSearchParamsPolyfill {

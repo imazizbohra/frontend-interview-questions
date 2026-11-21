@@ -6,7 +6,7 @@ Implement a `NodeRegistry` class that acts as that registry: it stores values ke
 
 Values should be looked up by node identity, not by text, tag name, attributes, or position in the tree.
 
-## Example(s)
+## Examples
 
 ```ts
 const registry = new NodeRegistry();
@@ -54,12 +54,12 @@ registry.get(second); // 'right panel'
 - You may attach internal hidden bookkeeping to nodes.
 - You do not need `delete()`, `clear()`, iteration, size tracking, serialization, or garbage-collection behavior.
 
-## Reference(s)
+## References
 
 - Concept [Middleware](https://developer.mozilla.org/en-US/docs/Glossary/Middleware)
 - Design Pattern [middleware](https://www.patterns.dev/vanilla/mediator-pattern/)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type NodeWithPrivateId = Node & Record<string, number | undefined>;

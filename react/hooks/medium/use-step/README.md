@@ -4,7 +4,7 @@ Implement a `useStep` hook that manages a step counter for a multi-step process.
 
 The hook should provide utility methods to go to the next and previous steps, and allow the step counter to be reset. The step number is 1-indexed and goes up to at most `maxStep`.
 
-## Argument(s)
+## Arguments
 
 `maxStep: number`: The maximum step number, i.e., the last step
 
@@ -27,7 +27,7 @@ The hook returns an object with the following properties and methods:
 - `setStep()` should ignore values outside the valid range.
 - `hasNext` and `hasPrevious` should be derived from the current step instead of stored separately.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -50,11 +50,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import {

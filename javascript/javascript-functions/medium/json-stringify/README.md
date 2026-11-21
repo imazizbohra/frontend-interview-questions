@@ -5,7 +5,7 @@ Implement a `jsonStringify` function that converts a JavaScript value into a JSO
 Only JSON-serializable values (i.e. `boolean`, `number`, `null`, `array`, `object`) will be present in the input value.
 Ignore the second and third optional parameters in the original API.
 
-## Example(s)
+## Examples
 
 ```ts
 jsonStringify({ foo: 'bar' }); // '{"foo":"bar"}'
@@ -23,11 +23,11 @@ jsonStringify(1); // '1'
 jsonStringify('foo'); // '"foo"'
 ```
 
-## Reference(s)
+## References
 
 - JSON [stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function jsonStringify(value: unknown): string {

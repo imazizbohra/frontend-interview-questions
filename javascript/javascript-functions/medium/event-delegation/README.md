@@ -13,7 +13,7 @@ The utility should attach one listener to `container` and invoke `listener(event
 
 Returns a cleanup function that removes the delegated listener from container.
 
-## Example(s)
+## Examples
 
 ```ts
 const actions = document.querySelector('#actions');
@@ -42,12 +42,12 @@ cleanup();
 - `container` may belong to another document or window, such as an iframe.
 - You do not need to support multiple selectors, capture-phase listeners, or non-bubbling events in this question.
 
-## Reference(s)
+## References
 
 - Node [ownerDocument](https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument)
 - Document [defaultView](https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type DelegatedEventListener = (

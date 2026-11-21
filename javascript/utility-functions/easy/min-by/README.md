@@ -2,7 +2,7 @@
 
 Implement a function `minBy(array, iteratee)` that finds the element inside array with the minimum value returned by iteratee.
 
-## Argument(s)
+## Arguments
 
 - array (Array): The array to iterate over.
 - iteratee (Function): The iteratee invoked per element.
@@ -11,7 +11,7 @@ Implement a function `minBy(array, iteratee)` that finds the element inside arra
 
 (*): Returns the element whose iteratee result is the minimum.
 
-## Example(s)
+## Examples
 
 ```ts
 minBy([2, 3, 1, 4], (num) => num); // => 1
@@ -26,7 +26,7 @@ If multiple elements produce the same minimum iteratee result, return the first 
 minBy([{ n: 1 }, { n: 2 }], (o) => o.m); // => undefined
 ```
 
-## Reference(s)
+## References
 
 - Array [from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 - Array [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -34,7 +34,7 @@ minBy([{ n: 1 }, { n: 2 }], (o) => o.m); // => undefined
 - Javascript [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - Lodash [_.minBy](https://lodash.com/docs/4.18.1#minBy)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

@@ -6,7 +6,7 @@ Implement a function `numberOfArguments` that returns the number of arguments it
 
 (Number): Returns the count of arguments.
 
-## Example(s)
+## Examples
 
 ```ts
 numberOfArguments(); // 0
@@ -15,13 +15,13 @@ numberOfArguments(2, 3); // 2
 numberOfArguments('a', 'b', 'c'); // 3
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - JavaScript [array-like Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)
 - Functions [Arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function mean(array: number[]): number {

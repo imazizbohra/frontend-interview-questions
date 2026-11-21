@@ -26,7 +26,7 @@ Use this as the interview scope for the clone:
 
 You do not need to fully support every browser or platform object. Values such as DOM nodes, promises, weak collections, errors, and typed arrays are outside the intended interview scope.
 
-## Example(s)
+## Examples
 
 ```ts
 const obj1 = {
@@ -56,13 +56,13 @@ clonedObj2.a.b = 'something new';
 obj2.a.b === obj2; // This should still be true
 ```
 
-## Reference(s)
+## References
 
 - Concept [deep copy](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy)
 - Window [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone)
 - Lodash [_.cloneDeep](https://lodash.com/docs/4.18.1#cloneDeep)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function deepClone<T>(value: T): T {

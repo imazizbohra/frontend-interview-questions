@@ -6,7 +6,7 @@ Implement an `ImmutableArray` class that wraps a plain array and exposes a small
 
 This question is intentionally interview-scoped. Use familiar array behavior, but you do not need to match every native `Array` edge case.
 
-## Example(s)
+## Examples
 
 ```ts
 const base = new ImmutableArray(['draft', 'review']);
@@ -47,11 +47,11 @@ base.toArray(); // ['a', 'b']
 - You may assume `set(index, value)` receives a valid non-negative index.
 - You do not need to support sparse arrays, negative indices, iterators, or bracket access like `array[0]`.
 
-## Reference(s)
+## References
 
 - Concept [Immutable](https://developer.mozilla.org/en-US/docs/Glossary/Immutable)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

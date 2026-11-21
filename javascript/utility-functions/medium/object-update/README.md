@@ -22,7 +22,7 @@ The important constraint is structural sharing:
 - Keep all untouched branches as the exact same references.
 - Do not mutate the input object.
 
-## Argument(s)
+## Arguments
 
 `objectUpdate(source, path, value)` accepts the following arguments:
 
@@ -36,7 +36,7 @@ The important constraint is structural sharing:
 
 Returns a new object with the updated value written at `path`.
 
-## Example(s)
+## Examples
 
 ```ts
 const state = {
@@ -84,11 +84,11 @@ console.log(state.status); // 'draft'
 - Only the objects on the updated path need to be shallow-cloned.
 - You do not need to support updater callbacks, arrays, missing-branch creation, or path validation.
 
-## Reference(s)
+## References
 
 - Lodash [_.set](https://lodash.com/docs/4.18.1#set)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function objectUpdate<T extends Record<string, unknown>>(

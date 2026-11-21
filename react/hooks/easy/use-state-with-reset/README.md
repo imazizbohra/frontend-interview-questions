@@ -2,7 +2,7 @@
 
 Implement a `useStateWithReset` hook that is similar to `useState` but with an additional reset function that resets the state to its initial value.
 
-## Argument(s)
+## Arguments
 
 initialValue: The initial value of the state. This argument should be the same as the first argument of the `useState` hook
 
@@ -10,7 +10,7 @@ initialValue: The initial value of the state. This argument should be the same a
 
 The `useStateWithReset` hook should have the same return values as the `useState` hook, plus an additional function that resets the state to initialValue.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -31,11 +31,11 @@ export default function Component() {
 Like `useState`, initialValue can be a value or a lazy initializer function.
 Resolve the initial value only on the first render. Later initialValue arguments do not change the reset baseline, and resetting should not call a lazy initializer again.
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useRef, useCallback } from "react";

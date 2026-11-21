@@ -2,7 +2,7 @@
 
 Implement a `useKeyPress` hook that detects keyboard events and runs a callback.
 
-## Argument(s)
+## Arguments
 
 - `key: string`: The key to detect. It must be a valid key value that is usually obtained from KeyboardEvent.key
 - `callback: (event: KeyboardEvent) => void`: A function that is called when the key identified by key is pressed
@@ -21,7 +21,7 @@ Nothing.
 - Pass the original keyboard event to callback so callers can call `preventDefault()` or inspect modifiers.
 - Clean up the event listener when the component unmounts or when the key, callback, event type, or target changes.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -34,11 +34,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useEffect } from "react";

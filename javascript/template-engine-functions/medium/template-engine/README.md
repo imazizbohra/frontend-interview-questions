@@ -11,7 +11,7 @@ This question is intentionally small:
 - Missing keys should render as an empty string.
 - Inputs are guaranteed valid.
 
-## Example(s)
+## Examples
 
 ```ts
 renderTemplate('Hello {{name}}!', { name: 'Alice' });
@@ -44,11 +44,11 @@ renderTemplate('Hello {{name}} {{surname}}!', { name: 'Alice' });
 - Resolved `null` and `undefined` values should render as an empty string.
 - You do not need to support nested paths, sections, or malformed templates in this question.
 
-## Reference(s)
+## References
 
 - String [replace](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type TemplateValue = null | undefined | boolean | number | string;

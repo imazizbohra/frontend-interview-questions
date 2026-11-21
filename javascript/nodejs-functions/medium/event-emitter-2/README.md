@@ -4,7 +4,7 @@ In the observer pattern (also commonly known as the publish-subscribe model), su
 
 Implement an `EventEmitter` class similar to the one in `Node.js` that follows such an observer pattern. The difference between this question and the first Event Emitter question is how listeners are unsubscribed. In this version, there's no `emitter.off()` method available on the `EventEmitter` instance. Instead, `emitter.on()` returns an object that has an `off()` method.
 
-## Example(s)
+## Examples
 
 ```ts
 const emitter = new EventEmitter();
@@ -36,7 +36,7 @@ emitter.emit('foo', -3, 9);
 - Node.js's `EventEmitter` implementation allows eventNames to be symbols, which are not allowed here.
 - Unlike the first `EventEmitter` question, `on()` returns a subscription object instead of the emitter instance, so method chaining through `on()` is no longer the focus.
 
-## Reference(s)
+## References
 
 - NodeJs [events](https://nodejs.org/api/events.html)
 
@@ -47,7 +47,7 @@ emitter.emit('foo', -3, 9);
 - Closures
 - Handling variadic arguments
 
-## Solution(s)
+## Solutions
 
 ```ts
 interface IEventEmitter {

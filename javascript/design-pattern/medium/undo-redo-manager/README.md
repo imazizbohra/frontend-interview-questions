@@ -2,7 +2,7 @@
 
 Undo/redo functionality is common in text editors, drawing tools, settings panels, and multi-step workflows. Instead of tying this logic to a UI, implement a reusable `UndoRedoManager` class that stores a history of values and can move backward and forward through that history.
 
-## Example(s)
+## Examples
 
 ```ts
 const manager = new UndoRedoManager(0);
@@ -38,11 +38,11 @@ manager.canRedo(); // false
 - Calling `set()` with the same value as the current value should still create a new history step.
 - You do not need to implement history inspection APIs such as `getHistory()` or `getIndex()`.
 
-## Reference(s)
+## References
 
 - javascriptbit.com [undo-redo](https://javascriptbit.com/frontend-system-design-undo-redo/)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1: Array + Current Pointer

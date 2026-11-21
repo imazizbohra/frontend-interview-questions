@@ -2,7 +2,7 @@
 
 Implement your own `Function.prototype.call` without calling the native call method. To avoid overwriting the actual `Function.prototype.call`, implement the function as `Function.prototype.myCall`.
 
-## Example(s)
+## Examples
 
 ```ts
 function multiplyAge(multiplier = 1) {
@@ -21,7 +21,7 @@ multiplyAge.myCall(mary); // 21
 multiplyAge.myCall(john, 2); // 84
 ```
 
-## Reference(s)
+## References
 
 - Operators [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - Operators [delete](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
@@ -31,7 +31,7 @@ multiplyAge.myCall(john, 2); // 84
 - Global Object [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - Function [call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
-## Solution(s)
+## Solutions
 
 ```ts
 Function.prototype.myCall = function (thisArg, ...argArray) {

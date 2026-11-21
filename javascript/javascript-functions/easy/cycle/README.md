@@ -2,7 +2,7 @@
 
 Implement a function that takes one or more values and returns a function that cycles through those values each time it is called.
 
-## Example(s)
+## Examples
 
 ```ts
 const helloFn = cycle('hello');
@@ -22,7 +22,7 @@ console.log(onOffFn()); // "on"
 - Each call to cycle() creates a separate closure with its own index.
 - The closure stores the argument values in the rest-parameter array. It does not deep-clone object values passed into the cycle.
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function cycle<T>(...values: Array<T>): () => T {

@@ -2,7 +2,7 @@
 
 Implement a `useEventListener` hook that subscribes to browser events by attaching event listeners to DOM elements, the window, or media query lists.
 
-## Argument(s)
+## Arguments
 
 - `eventName: string`: The event type to listen for
 - `handler: (event) => void`: The event handler function
@@ -20,7 +20,7 @@ Nothing.
 - Clean up the `listener` when the component unmounts or when the event name, target ref, or options change.
 - If the resolved target does not support `addEventListener`, do nothing.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -38,11 +38,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { RefObject, useEffect, useRef } from "react";

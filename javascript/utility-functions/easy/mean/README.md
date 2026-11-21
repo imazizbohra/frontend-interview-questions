@@ -2,7 +2,7 @@
 
 Implement a function `mean(array)` that returns the mean (also known as the average) of the values in array, an array of numbers.
 
-## Argument(s)
+## Arguments
 
 array (Array): The array of numbers.
 
@@ -10,7 +10,7 @@ array (Array): The array of numbers.
 
 (Number): Returns the mean of the values in array.
 
-## Example(s)
+## Examples
 
 ```ts
 mean([4, 2, 8, 6]); // => 5
@@ -22,12 +22,12 @@ mean([1, 2, 2]); // => 1.6666666666666667
 mean([]); // => NaN
 ```
 
-## Reference(s)
+## References
 
 - Array [Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 - Lodash [_.mean](https://lodash.com/docs/4.18.1#mean)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

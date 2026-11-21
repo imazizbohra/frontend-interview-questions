@@ -6,7 +6,7 @@ It is more convenient to use `useSet` instead of plain useState because with use
 
 The hook should work generically with items of any type.
 
-## Argument(s)
+## Arguments
 
 `initialState`: The initial Set of items
 
@@ -29,7 +29,7 @@ The hook returns an object with the following properties:
 - `clear()` replaces the state with a new empty set.
 - `add`, `remove`, and `toggle` should derive their next state from the latest previous set.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -50,11 +50,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState, useCallback } from "react";

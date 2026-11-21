@@ -6,7 +6,7 @@ Before `Element.classList` and `DOMTokenList` were part of the browser standards
 
 `jQuery` is a library that simplifies DOM manipulation (among other things). jQuery (using the `$` alias function) provided convenient APIs to toggle, add, and remove classes from elements via `.toggleClass()`, `.addClass()`, and `.removeClass()`.
 
-## Example(s)
+## Examples
 
 ```ts
 // <button class="foo bar">Click me</button>
@@ -30,11 +30,11 @@ $('button')
 
 Implement the `toggleClass()`, `addClass()`, and `removeClass()` methods according to the following specifications. Do not use `Element.classList` or `DOMTokenList` methods; otherwise the problem becomes quite trivial.
 
-## Reference(s)
+## References
 
 - Element [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 
-## Solution(s)
+## Solutions
 
 ```ts
 interface JQuery {

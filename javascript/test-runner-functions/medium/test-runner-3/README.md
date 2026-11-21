@@ -9,7 +9,7 @@ Keep the same `createTestRunner()` API, nested suites, matcher behavior, synchro
 
 Hooks are scoped to the current suite and inherited by descendant specs.
 
-## Example(s)
+## Examples
 
 ```ts
 const log = [];
@@ -79,12 +79,12 @@ log;
 - Hooks should apply to descendant specs only.
 - You do not need beforeAll, afterAll, skipped tests, async hooks, or detailed hook failure semantics.
 
-## Reference(s)
+## References
 
 - Jest [jestjs.io](https://jestjs.io/)
 - vitest [vitest.dev](https://vitest.dev/)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type HookFn = () => void;

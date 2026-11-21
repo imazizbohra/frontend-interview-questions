@@ -2,7 +2,7 @@
 
 Implement a function `functionLength` to return the number of parameters a function expects. Note that `this` is a static value defined by the function, not the number of arguments the function is called with (which is determined by `arguments.length`).
 
-## Argument(s)
+## Arguments
 
 value (function): The function to operate on.
 
@@ -10,7 +10,7 @@ value (function): The function to operate on.
 
 (number): Returns the number of parameters a function expects.
 
-## Example(s)
+## Examples
 
 ```ts
 function foo() {}
@@ -23,11 +23,11 @@ functionLength(baz); // 2
 
 ```
 
-## Reference(s)
+## References
 
 Function [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export default function functionLength(fn: Function): number {

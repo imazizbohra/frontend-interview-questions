@@ -6,7 +6,7 @@ Implement a function `memoize(func)` that takes a function parameter `func` and 
 
 When the memoized function computes a result, it should invoke `func` with the memoized function's `this` binding.
 
-## Example(s)
+## Examples
 
 ```ts
 function expensiveFunction(n) {
@@ -30,13 +30,13 @@ console.log(memoizedExpensiveFunction(10)); // Output: Computing... 20
 console.log(memoizedExpensiveFunction(10)); // Output: 20
 ```
 
-## Reference(s)
+## References
 
 - Javascript [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - Function [call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 - Lodash [_.memoize](https://lodash.com/docs/4.18.1#memoize)
 
-## Solution(s)
+## Solutions
 
 ```ts
 type Fn = (this: any, arg: string | number) => unknown;

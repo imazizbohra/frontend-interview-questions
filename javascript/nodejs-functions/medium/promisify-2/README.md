@@ -6,7 +6,7 @@ In Promisify, the promisify function returns a promise-returning version of a fu
 
 In Node.js, a function can use the `util.promisify.custom` symbol to override the return value of `util.promisify()`. This is useful when the original function does not follow the standard format of taking an error-first callback as the last argument, especially for legacy formats that are incompatible with `util.promisify's` callback-last convention.
 
-## Example(s)
+## Examples
 
 ```ts
 // Example usage in Node.js.
@@ -55,13 +55,13 @@ const promisifiedFoo = foo[Symbol.for('util.promisify.custom')]; // true
 const data = await promisifiedFoo('example.com', { foo: 1 });
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - How to use promises [Promises](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - NodeJs [util.promisify.custom](https://nodejs.org/api/util.html#custom-promisified-functions)
 
-## Solution(s)
+## Solutions
 
 ```ts
 const promisifyCustomSymbol = Symbol.for("util.promisify.custom");

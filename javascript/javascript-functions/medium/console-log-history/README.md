@@ -12,7 +12,7 @@ Only `console.log()` and `console.clear()` matter for this question:
 - `console.clear()` should clear the stored history.
 - Wrapped `console.log()` and `console.clear()` should still call through to the original console methods.
 
-## Example(s)
+## Examples
 
 ```ts
 import consoleLogHistory from './console-log-history';
@@ -39,12 +39,12 @@ getHistory();
 // [['second']]
 ```
 
-## Reference(s)
+## References
 
 - Javascript [function-borrowing](https://javascript.plainenglish.io/function-borrowing-in-javascript-275e336a27f6)
 - Function [call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

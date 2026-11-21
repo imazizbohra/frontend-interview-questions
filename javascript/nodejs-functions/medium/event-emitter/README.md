@@ -8,7 +8,7 @@ Implement an `EventEmitter` class similar to the one in [Node.js](https://nodejs
 
 Example usage of the `EventEmitter` class:
 
-## Example(s)
+## Examples
 
 ```ts
 const emitter = new EventEmitter();
@@ -37,11 +37,11 @@ emitter.emit('foo', -3, 9);
 - Calling `off()` for a missing event or listener is a no-op.
 - Event names are arbitrary strings and can match inherited object property names such as `toString`.
 
-## Reference(s)
+## References
 
 - NodeJs [events](https://nodejs.org/api/events.html)
 
-## Solution(s)
+## Solutions
 
 ```ts
 interface IEventEmitter {

@@ -2,7 +2,7 @@
 
 Implement a `useFocus` hook that enables focusing an element programmatically.
 
-## Argument(s)
+## Arguments
 
 Nothing.
 
@@ -13,7 +13,7 @@ The hook returns an array with two elements:
 - A ref object that will be attached to the ref prop of the element to focus. This has the type `RefObject<T>`, where `T extends HTMLElement`
 - A function `() => void` that can be called to programmatically focus the element
 
-## Example(s)
+## Examples
 
 ```ts
 export default function Component() {
@@ -32,12 +32,12 @@ export default function Component() {
 
 Calling the function while no element is attached should do nothing.
 
-## Reference(s)
+## References
 
 - React [useRef](https://react.dev/reference/react/useRef)
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { RefObject, useRef, useCallback } from "react";

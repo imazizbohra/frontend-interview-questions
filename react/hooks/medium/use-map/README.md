@@ -6,7 +6,7 @@ It is more convenient to use `useMap` instead of plain `useState` because with `
 
 The hook should work generically with keys and values of any type.
 
-## Argument(s)
+## Arguments
 
 initialState: The initial map of items. This can be either a Map instance or an array of key-value pairs
 
@@ -27,7 +27,7 @@ The hook returns an object with the following properties:
 - setAll(entries) replaces the whole map; it does not merge with the existing map.
 - reset() returns to an empty map.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -61,11 +61,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { useState } from "react";

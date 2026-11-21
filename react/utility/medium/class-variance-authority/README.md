@@ -4,7 +4,7 @@
 
 Implement a simplified `cva` function. This version only needs to support `base`, `variants`, and `defaultVariants`. You do not need to support `compoundVariants`, `class`, or `className`.
 
-## Argument(s)
+## Arguments
 
 `cva(base, config)`
 
@@ -23,7 +23,7 @@ Returns a function that accepts an object of selected variant values and returns
 - Ignore resolved variant values that do not exist in the corresponding variant map.
 - Join all truthy class names with a single space and no leading or trailing whitespace.
 
-## Example(s)
+## Examples
 
 ```tsx
 const button = cva('btn', {
@@ -53,11 +53,11 @@ button({ size: 'small' }); // 'btn btn-primary btn-small'
 button({ intent: 'secondary', disabled: true }); // 'btn btn-secondary btn-medium btn-disabled'
 ```
 
-## Reference(s)
+## References
 
 Github [cva](https://github.com/joe-bell/cva)
 
-## Solution(s)
+## Solutions
 
 ```ts
 export type ClassValue = string | false | null | undefined;

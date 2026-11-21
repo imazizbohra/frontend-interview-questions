@@ -14,7 +14,7 @@ fn (Function): The function to curry.
 
 (Function): Returns the curried function.
 
-## Example(s)
+## Examples
 
 ```ts
 function add(a, b) {
@@ -42,12 +42,12 @@ const containsFourMulFive = containsFour(5);
 containsFourMulFive(6); // 120
 ```
 
-## Reference(s)
+## References
 
 - JavaScript [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
 - Function [call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
-## Solution(s)
+## Solutions
 
 ```ts
 // Approach 1

@@ -2,7 +2,7 @@
 
 Implement a `useMediatedState` hook that is similar to useState, but supports a mediator function that runs on each state update. This mediator function can be used to transform or intercept state updates.
 
-## Argument(s)
+## Arguments
 
 - `mediator`: A function that receives the new state and returns the transformed state. This function can have two forms:
   - `(newState: T) => T` that receives one argument, the new state dispatched by `setState`, and returns the final state, or
@@ -28,7 +28,7 @@ Essentially, the hook returns the same values as `useState`.
 - A two-argument `mediator` controls updates by calling the supplied `dispatch` function.
 - For a two-argument `mediator`, state remains unchanged until `dispatch` is called. `dispatch` may be called synchronously or asynchronously.
 
-## Example(s)
+## Examples
 
 ```tsx
 const replaceMultipleSpaces = (s) => s.replace(/[\s]+/g, ' ');
@@ -51,11 +51,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 - React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { Dispatch, SetStateAction, useCallback, useRef, useState } from "react";

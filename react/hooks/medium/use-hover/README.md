@@ -2,7 +2,7 @@
 
 Implement a `useHover` hook that tracks whether an element is being hovered.
 
-## Argument(s)
+## Arguments
 
 Nothing.
 
@@ -20,7 +20,7 @@ The hook returns an array with two elements:
 - The boolean should start as false.
 - Only mouse hover behavior is required; touch, pointer, and focus states are out of scope.
 
-## Example(s)
+## Examples
 
 ```tsx
 export default function Component() {
@@ -34,11 +34,11 @@ export default function Component() {
 }
 ```
 
-## Reference(s)
+## References
 
 React [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
 
-## Solution(s)
+## Solutions
 
 ```ts
 import { RefCallback, useState, useRef, useEffect, useCallback } from "react";
