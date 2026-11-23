@@ -14,6 +14,7 @@ Collection of frontend interview questions
 - [Medium - DOM Traversal Functions](./javascript/dom-traversal-functions/medium/)
 - [Medium - Javascript Functions](./javascript/javascript-functions/medium/)
 - [Medium - NodeJS Functions](./javascript/nodejs-functions/medium/)
+- [Medium - ORM Functions](./javascript/orm-functions/medium/)
 - [Medium - Prototype Functions](./javascript/prototype-functions/medium/)
 - [Medium - Schema Validator Functions](./javascript/schema-validator-functions/medium/)
 - [Medium - Template Engine Functions](./javascript/template-engine-functions/medium/)
