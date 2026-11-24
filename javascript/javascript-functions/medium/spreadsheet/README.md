@@ -61,6 +61,13 @@ sheet.setCell('C1', '=B1 + 4');
 sheet.getCell('C1'); // 9
 ```
 
+## Notes
+
+- Cell references use uppercase A1-style labels such as `A1` and `B12`.
+- Spaces inside formulas should be ignored.
+- Formula operands are either cell references or unsigned numeric literals.
+- You do not need subtraction, multiplication, division, cycles, ranges, or invalid-formula handling in this question.
+
 ## References
 
 - Javascript [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
