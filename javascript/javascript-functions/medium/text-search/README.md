@@ -23,7 +23,7 @@ textSearch('aaa', 'aa');
 // This is because the second character cannot be used as a match again.
 ```
 
-Consecutive matches should be combined into a single <b> tag.
+Consecutive matches should be combined into a single `<b>` tag.
 
 ```ts
 textSearch('aaaa', 'aa');
