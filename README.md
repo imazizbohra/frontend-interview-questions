@@ -10,16 +10,25 @@ Collection of frontend interview questions
 - [Easy - Promise Functions](./javascript/promise-functions/easy/)
 - [Easy - Prototype Functions](./javascript/prototype-functions/easy/)
 - [Easy - Utility Functions](./javascript/utility-functions/easy/)
+
+---
+
 - [Medium - Design Pattern](./javascript/design-pattern/medium/)
 - [Medium - DOM Traversal Functions](./javascript/dom-traversal-functions/medium/)
 - [Medium - Javascript Functions](./javascript/javascript-functions/medium/)
+- [Medium - jQuery Functions](./javascript/jquery-functions/medium/)
 - [Medium - NodeJS Functions](./javascript/nodejs-functions/medium/)
 - [Medium - ORM Functions](./javascript/orm-functions/medium/)
+- [Medium - Promise Functions](./javascript/promise-functions/medium/)
 - [Medium - Prototype Functions](./javascript/prototype-functions/medium/)
 - [Medium - Schema Validator Functions](./javascript/schema-validator-functions/medium/)
 - [Medium - Template Engine Functions](./javascript/template-engine-functions/medium/)
 - [Medium - Test Runner Functions](./javascript/test-runner-functions/medium/)
 - [Medium - Utility Functions](./javascript/utility-functions/medium/)
+
+---
+
+- [Hard - Promise Functions](./javascript/promise-functions/hard/)
 
 ## React
 
