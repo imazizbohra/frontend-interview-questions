@@ -1,59 +1,58 @@
-# Promise
+# Promise II
 
-JavaScript `Promises` are the foundation for most asynchronous code. In this question, you will implement the first part of a simplified `Promise` class to understand the state machine behind fulfillment, rejection, and `.then()` callbacks.
+This is a follow-up to [Promise](../../medium/promise/). In the first part, `MyPromise` could settle and notify `.then()` handlers asynchronously. In this part, you will add the behavior that makes promises composable: `.then()` should return a new promise.
 
 Implement a class named `MyPromise`.
 
 ## Requirements
 
-`new MyPromise(executor)`
-Creates a promise-like object. The `executor` function receives two functions:
+Keep the behavior from Part I:
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `resolve` | Function | Fulfills the promise with a value. |
-| `reject` | Function | Rejects the promise with a reason. |
+- The executor runs immediately.
+- An executor error rejects the promise if it has not already settled.
+- A promise can be pending, fulfilled, or rejected.
+- `resolve` and `reject` settle the promise only once.
+- `.then()` handlers run asynchronously.
+- Multiple and late `.then()` handlers are supported.
 
-The executor should run immediately. If it throws before settlement, reject with the thrown error. Calling `resolve` or `reject` should settle the promise only once, so a later call or executor error cannot replace the first result.
+Add the following behavior:
 
 `promise.then(onFulfilled, onRejected)`
-Registers callbacks that run after the promise settles.
+`.then()` should return a new `MyPromise`.
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `onFulfilled` | Function | Called with the fulfilled value. |
-| `onRejected` | Function | Called with the rejection reason. |
+- If `onFulfilled` returns a value, the returned promise fulfills with that value.
+- If `onRejected` returns a value, the returned promise fulfills with that value.
+- If either handler throws, the returned promise rejects with the thrown error.
+- If a handler is omitted, the previous fulfillment or rejection should propagate.
+- If a handler returns another `MyPromise`, the returned promise should adopt that MyPromise's eventual state.
 
-Handlers must run asynchronously, even if the promise has already settled. Multiple `.then()` calls should all be notified, and handlers added after settlement should still run.
-
-Either handler may be omitted. Handler return values do not change the original promise's outcome. This part does not assess `.then()`'s return value or promise chaining; dependent promise chaining is introduced in Part II.
+`promise.catch(onRejected)`
+`.catch(onRejected)` should behave like `.then(undefined, onRejected)`.
 
 ## Notes
 
-- This is an interview-focused simplification, not a full Promises/A+ implementation.
-- Chaining behavior is introduced in Promise II.
-- Static helper methods are introduced in Promise III.
+- This is still a simplified interview implementation.
+- Generic thenable assimilation and full Promises/A+ self-resolution handling are out of scope.
+- Static methods are introduced in [Promise III](../promise-3/).
 
 ## Examples
 
 ```ts
-const promise = new MyPromise((resolve) => {
-  resolve(42);
-});
+const result = await new MyPromise((resolve) => {
+  resolve(2);
+})
+  .then((value) => value + 3)
+  .then((value) => value * 4);
 
-promise.then((value) => {
-  console.log(value); // 42
-});
+console.log(result); // 20
 ```
 
 ```ts
-const promise = new MyPromise((resolve) => {
-  resolve(42);
-});
+const result = await new MyPromise((resolve, reject) => {
+  reject('failed');
+}).catch((reason) => `Recovered from ${reason}`);
 
-promise.then((value) => {
-  console.log(value); // 42
-});
+console.log(result); // 'Recovered from failed'
 ```
 
 ## References
@@ -66,15 +65,17 @@ promise.then((value) => {
 ```ts
 type PromiseCallback = (value: any) => unknown;
 
+type Handler = {
+  onFulfilled: PromiseCallback;
+  onRejected: PromiseCallback;
+  resolve: PromiseCallback;
+  reject: PromiseCallback;
+};
+
 const PROMISE_STATE = {
   PENDING: "PENDING",
   FULFILLED: "FULFILLED",
   REJECTED: "REJECTED",
-};
-
-type Handler = {
-  onFulfilled: PromiseCallback;
-  onRejected: PromiseCallback;
 };
 
 export default class MyPromise {
@@ -121,33 +122,52 @@ export default class MyPromise {
       return;
     }
 
-    this.#handlers.forEach(({ onFulfilled, onRejected }) => {
+    this.#handlers.forEach(({ onFulfilled, onRejected, resolve, reject }) => {
       queueMicrotask(() => {
-        const handler =
-          this.#state === PROMISE_STATE.FULFILLED ? onFulfilled : onRejected;
-        handler(this.#result);
+        try {
+          const handler =
+            this.#state === PROMISE_STATE.FULFILLED ? onFulfilled : onRejected;
+          const valueOrPromise = handler(this.#result);
+
+          if (valueOrPromise instanceof MyPromise) {
+            valueOrPromise.then(resolve, reject);
+          } else {
+            resolve(valueOrPromise);
+          }
+        } catch (error) {
+          reject(error);
+        }
       });
     });
     this.#handlers = [];
   }
 
-  then(onFulfilled?: PromiseCallback, onRejected?: PromiseCallback): void {
-    const handler: Handler = {
-      onFulfilled:
-        onFulfilled ??
-        ((value: any) => {
-          return value;
-        }),
-      onRejected:
-        onRejected ??
-        ((error: any) => {
-          throw error;
-        }),
-    };
+  then(onFulfilled?: PromiseCallback, onRejected?: PromiseCallback): MyPromise {
+    const promise = new MyPromise((resolve, reject) => {
+      const handler: Handler = {
+        onFulfilled:
+          onFulfilled ??
+          ((value: any) => {
+            return value;
+          }),
+        onRejected:
+          onRejected ??
+          ((error: any) => {
+            throw error;
+          }),
+        resolve: resolve,
+        reject: reject,
+      };
 
-    this.#handlers.push(handler);
+      this.#handlers.push(handler);
+      this.#executeHandlers();
+    });
 
-    this.#executeHandlers();
+    return promise;
+  }
+
+  catch(onRejected?: PromiseCallback): MyPromise {
+    return this.then(undefined, onRejected);
   }
 }
 ```
