@@ -246,22 +246,17 @@ export default class MyPromise {
   }
 
   finally(onFinally?: () => unknown): MyPromise {
-    if (typeof onFinally !== "function") {
-      return this.then(
-        (value: unknown) => value,
-        (reason: unknown) => {
-          throw reason;
-        },
-      );
-    }
-
+    // wait for the cleanup fun to finish then settle next promise in the chain
+    // if onFinally() returns primitive -> immediate settle -> swallow
+    // if onFinally() returns promise -> wait for it -> swallow
+    // if onFinally() throws error -> catch by #executeHandlers catch block
     return this.then(
       (value: unknown) =>
-        MyPromise.resolve(onFinally()).then(() => {
+        MyPromise.resolve(onFinally ? onFinally() : value).then(() => {
           return value;
         }),
       (reason: unknown) =>
-        MyPromise.resolve(onFinally()).then(() => {
+        MyPromise.resolve(onFinally ? onFinally() : reason).then(() => {
           throw reason;
         }),
     );
