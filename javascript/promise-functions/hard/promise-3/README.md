@@ -1,59 +1,77 @@
-# Promise
+# Promise III
 
-JavaScript `Promises` are the foundation for most asynchronous code. In this question, you will implement the first part of a simplified `Promise` class to understand the state machine behind fulfillment, rejection, and `.then()` callbacks.
+This is a follow-up to [Promise II](../promise-2/). In this part, you will add convenience APIs that make the simplified MyPromise class closer to the native Promise API.
 
 Implement a class named `MyPromise`.
 
 ## Requirements
 
-`new MyPromise(executor)`
-Creates a promise-like object. The `executor` function receives two functions:
+Keep the behavior from the previous parts:
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `resolve` | Function | Fulfills the promise with a value. |
-| `reject` | Function | Rejects the promise with a reason. |
+- The executor runs immediately.
+- An executor error rejects the promise if it has not already settled.
+- A promise settles only once.
+- `.then()` handlers run asynchronously.
+- `.then()` returns a new MyPromise and supports chaining.
+- `.catch(onRejected)` behaves like `.then(undefined, onRejected)`.
 
-The executor should run immediately. If it throws before settlement, reject with the thrown error. Calling `resolve` or `reject` should settle the promise only once, so a later call or executor error cannot replace the first result.
+Add the following behavior:
 
-`promise.then(onFulfilled, onRejected)`
-Registers callbacks that run after the promise settles.
+`promise.finally(onFinally)`
+Runs `onFinally` when the promise settles.
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `onFulfilled` | Function | Called with the fulfilled value. |
-| `onRejected` | Function | Called with the rejection reason. |
+- If the original promise fulfills, `.finally()` should fulfill with the original value.
+- If the original promise rejects, `.finally()` should reject with the original reason.
+- If `onFinally` returns a fulfilling `MyPromise`, wait for it before preserving the original outcome.
+- If `onFinally` throws or returns a rejecting `MyPromise`, the promise returned by `.finally()` should reject with that new reason.
+- If `onFinally` is omitted, `.finally()` should pass the original outcome through unchanged.
 
-Handlers must run asynchronously, even if the promise has already settled. Multiple `.then()` calls should all be notified, and handlers added after settlement should still run.
+`MyPromise.resolve(value)`
 
-Either handler may be omitted. Handler return values do not change the original promise's outcome. This part does not assess `.then()`'s return value or promise chaining; dependent promise chaining is introduced in Part II.
+Returns a fulfilled `MyPromise` for `value`. If `value` is already a `MyPromise`, return it unchanged.
+
+`MyPromise.reject(reason)`
+
+Returns a rejected `MyPromise` for `reason`.
+
+`MyPromise.all(values)`
+
+Accepts an array of values and promises. It returns a `MyPromise` that:
+
+- fulfills with an array of fulfilled values in input order
+- fulfills with `[]` for an empty array
+- rejects as soon as any input rejects
+
+`MyPromise.race(values)`
+
+Accepts an array of values and promises. It returns a `MyPromise` that settles with the first input to settle.
 
 ## Notes
 
-- This is an interview-focused simplification, not a full Promises/A+ implementation.
-- Chaining behavior is introduced in Promise II.
-- Static helper methods are introduced in Promise III.
+- The static collection helpers only need to accept arrays, not generic iterables.
+- Full Promises/A+ compliance is still out of scope for this interview version.
+- For additional static helpers, see the existing `Promise.allSettled`, `Promise.any`, and `Promise.withResolvers` questions.
 
 ## Examples
 
 ```ts
-const promise = new MyPromise((resolve) => {
-  resolve(42);
+const value = await MyPromise.resolve(42).finally(() => {
+  console.log('done');
 });
 
-promise.then((value) => {
-  console.log(value); // 42
-});
+console.log(value); // 42
 ```
 
 ```ts
-const promise = new MyPromise((resolve) => {
-  resolve(42);
-});
+const result = await MyPromise.all([
+  MyPromise.resolve(1),
+  2,
+  new MyPromise((resolve) => {
+    setTimeout(() => resolve(3), 100);
+  }),
+]);
 
-promise.then((value) => {
-  console.log(value); // 42
-});
+console.log(result); // [1, 2, 3]
 ```
 
 ## References
@@ -66,15 +84,17 @@ promise.then((value) => {
 ```ts
 type PromiseCallback = (value: any) => unknown;
 
+type Handler = {
+  onFulfilled: PromiseCallback;
+  onRejected: PromiseCallback;
+  resolve: PromiseCallback;
+  reject: PromiseCallback;
+};
+
 const PROMISE_STATE = {
   PENDING: "PENDING",
   FULFILLED: "FULFILLED",
   REJECTED: "REJECTED",
-};
-
-type Handler = {
-  onFulfilled: PromiseCallback;
-  onRejected: PromiseCallback;
 };
 
 export default class MyPromise {
@@ -94,6 +114,62 @@ export default class MyPromise {
     } catch (error) {
       this.#reject(error);
     }
+  }
+
+  static resolve(value?: any): MyPromise {
+    if (value instanceof MyPromise) {
+      return value;
+    }
+
+    return new MyPromise((resolve) => {
+      resolve(value);
+    });
+  }
+
+  static reject(reason?: any): MyPromise {
+    return new MyPromise((_, reject) => {
+      reject(reason);
+    });
+  }
+
+  static all(values: Array<any>): MyPromise {
+    return new MyPromise((resolve, reject) => {
+      if (values.length === 0) {
+        resolve([]);
+        return;
+      }
+
+      let resolvedCount: number = 0;
+      const results = new Array<any>(values.length);
+
+      function fulfilled(index: number, result: any) {
+        resolvedCount++;
+        results[index] = result;
+
+        if (resolvedCount === values.length) {
+          resolve(results);
+        }
+      }
+
+      for (let i = 0; i < values.length; i++) {
+        const elem = values[i];
+        const promise = MyPromise.resolve(elem);
+        promise.then(fulfilled.bind(null, i)).catch(reject);
+      }
+    });
+  }
+
+  static race(values: Array<any>): MyPromise {
+    return new MyPromise((resolve, reject) => {
+      values
+        .map((elem) => MyPromise.resolve(elem))
+        .forEach((promise) => {
+          promise.then(
+            (value) => resolve(value),
+            (reason) => reject(reason),
+          );
+        });
+    });
   }
 
   #resolve(value: any) {
@@ -121,33 +197,74 @@ export default class MyPromise {
       return;
     }
 
-    this.#handlers.forEach(({ onFulfilled, onRejected }) => {
+    this.#handlers.forEach(({ onFulfilled, onRejected, resolve, reject }) => {
       queueMicrotask(() => {
-        const handler =
-          this.#state === PROMISE_STATE.FULFILLED ? onFulfilled : onRejected;
-        handler(this.#result);
+        try {
+          const handler =
+            this.#state === PROMISE_STATE.FULFILLED ? onFulfilled : onRejected;
+          const valueOrPromise = handler(this.#result);
+
+          if (valueOrPromise instanceof MyPromise) {
+            valueOrPromise.then(resolve, reject);
+          } else {
+            resolve(valueOrPromise);
+          }
+        } catch (error) {
+          reject(error);
+        }
       });
     });
     this.#handlers = [];
   }
 
-  then(onFulfilled?: PromiseCallback, onRejected?: PromiseCallback): void {
-    const handler: Handler = {
-      onFulfilled:
-        onFulfilled ??
-        ((value: any) => {
+  then(onFulfilled?: PromiseCallback, onRejected?: PromiseCallback): MyPromise {
+    const promise = new MyPromise((resolve, reject) => {
+      const handler: Handler = {
+        onFulfilled:
+          onFulfilled ??
+          ((value: any) => {
+            return value;
+          }),
+        onRejected:
+          onRejected ??
+          ((error: any) => {
+            throw error;
+          }),
+        resolve: resolve,
+        reject: reject,
+      };
+
+      this.#handlers.push(handler);
+      this.#executeHandlers();
+    });
+
+    return promise;
+  }
+
+  catch(onRejected?: PromiseCallback): MyPromise {
+    return this.then(undefined, onRejected);
+  }
+
+  finally(onFinally?: () => unknown): MyPromise {
+    if (typeof onFinally !== "function") {
+      return this.then(
+        (value: unknown) => value,
+        (reason: unknown) => {
+          throw reason;
+        },
+      );
+    }
+
+    return this.then(
+      (value: unknown) =>
+        MyPromise.resolve(onFinally()).then(() => {
           return value;
         }),
-      onRejected:
-        onRejected ??
-        ((error: any) => {
-          throw error;
+      (reason: unknown) =>
+        MyPromise.resolve(onFinally()).then(() => {
+          throw reason;
         }),
-    };
-
-    this.#handlers.push(handler);
-
-    this.#executeHandlers();
+    );
   }
 }
 ```
