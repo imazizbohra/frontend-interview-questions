@@ -246,10 +246,20 @@ export default class MyPromise {
   }
 
   finally(onFinally?: () => unknown): MyPromise {
-    // wait for the cleanup fun to finish then settle next promise in the chain
-    // if onFinally() returns primitive -> immediate settle -> swallow
-    // if onFinally() returns promise -> wait for it -> swallow
-    // if onFinally() throws error -> catch by #executeHandlers catch block
+    // Wait for the cleanup operation to finish before settling the next promise.
+
+    // If onFinally() returns a primitive:
+    // MyPromise.resolve() wraps it in a fulfilled promise.
+    // The cleanup result is ignored, and the original value/reason is preserved.
+
+    // If onFinally() returns a promise:
+    // Wait for it to settle.
+    // If fulfilled, preserve the original value/reason.
+    // If rejected, propagate the cleanup rejection.
+
+    // If onFinally() throws an error:
+    // The exception is caught by the try/catch in #executeHandlers()
+    // and the next promise is rejected with that error.
     return this.then(
       (value: unknown) =>
         MyPromise.resolve(onFinally ? onFinally() : value).then(() => {
