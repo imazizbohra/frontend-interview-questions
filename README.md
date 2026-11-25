@@ -29,6 +29,7 @@ Collection of frontend interview questions
 ---
 
 - [Hard - Promise Functions](./javascript/promise-functions/hard/)
+- [Hard - Test Runner Functions](./javascript/test-runner-functions/hard/)
 
 ## React
 
