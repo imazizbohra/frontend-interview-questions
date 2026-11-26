@@ -35,8 +35,15 @@ Collection of frontend interview questions
 ## React
 
 - [Easy - Hooks](./react/hooks/easy/)
+
+---
+
 - [Medium - Hooks](./react/hooks/medium/)
-- [Medium - Utility](./react/utility/)
+- [Medium - Utility](./react/utility/medium/)
+
+---
+
+- [Hard - Utility](./react/utility/hard/)
 
 ## Techniques
 
