@@ -22,6 +22,7 @@ Collection of frontend interview questions
 - [Medium - Promise Functions](./javascript/promise-functions/medium/)
 - [Medium - Prototype Functions](./javascript/prototype-functions/medium/)
 - [Medium - Schema Validator Functions](./javascript/schema-validator-functions/medium/)
+- [Medium - Spreadsheet Functions](./javascript/spreadsheet-functions/medium/)
 - [Medium - Template Engine Functions](./javascript/template-engine-functions/medium/)
 - [Medium - Test Runner Functions](./javascript/test-runner-functions/medium/)
 - [Medium - Utility Functions](./javascript/utility-functions/medium/)
@@ -32,6 +33,7 @@ Collection of frontend interview questions
 - [Hard - ORM Functions](./javascript/orm-functions/hard/)
 - [Hard - Promise Functions](./javascript/promise-functions/hard/)
 - [Hard - Schema Validator Functions](./javascript/schema-validator-functions/hard/)
+- [Hard - Spreadsheet Functions](./javascript/spreadsheet-functions/hard/)
 - [Hard - Test Runner Functions](./javascript/test-runner-functions/hard/)
 
 ## React
