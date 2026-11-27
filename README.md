@@ -31,6 +31,7 @@ Collection of frontend interview questions
 - [Hard - Javascript Functions](./javascript/javascript-functions/hard/)
 - [Hard - ORM Functions](./javascript/orm-functions/hard/)
 - [Hard - Promise Functions](./javascript/promise-functions/hard/)
+- [Hard - Schema Validator Functions](./javascript/schema-validator-functions/hard/)
 - [Hard - Test Runner Functions](./javascript/test-runner-functions/hard/)
 
 ## React
